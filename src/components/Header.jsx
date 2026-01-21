@@ -209,7 +209,7 @@ export default function Header({
   const navLinks = links || [
     { key: "home", label: "Home", to: "/" },
     { key: "about", label: "About", to: "/aboutus" },
-    { key: "pages", label: "Pages", to: "/pages" },
+    { key: "packages", label: "Packages", to: "/packages" },
     { key: "destination", label: "Destination", to: "/destination" },
     { key: "tour", label: "Tour", to: "/tour" },
     { key: "blog", label: "Gallery", to: "/gallery" },
