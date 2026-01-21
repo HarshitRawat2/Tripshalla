@@ -19,8 +19,8 @@ export default function SeasonCardsSection() {
   const seasons = [
     { key: "summer", title: "Summer", img: "/src/assets/1.jpg" },
     { key: "winter", title: "Winter", img: "/src/assets/2.jpg" },
-    { key: "rainy",  title: "Rainy",  img: "/src/assets/3.jpg" },
-    { key: "monsoon",title: "Monsoon",img: "/src/assets/4.jpg" },
+    { key: "rainy", title: "Rainy", img: "/src/assets/3.jpg" },
+    { key: "monsoon", title: "Monsoon", img: "/src/assets/4.jpg" },
   ];
 
   const [current, setCurrent] = useState(0);
@@ -31,19 +31,23 @@ export default function SeasonCardsSection() {
   const handlePrev = () => setCurrent((s) => (s - 1 + n) % n);
   const handleNext = () => setCurrent((s) => (s + 1) % n);
 
-  const leftKey = useMemo(() => `${seasons[leftIdx].key}-${leftIdx}`, [leftIdx, seasons]);
-  const rightKey = useMemo(() => `${seasons[rightIdx].key}-${rightIdx}`, [rightIdx, seasons]);
+  const leftKey = useMemo(
+    () => `${seasons[leftIdx].key}-${leftIdx}`,
+    [leftIdx, seasons],
+  );
+  const rightKey = useMemo(
+    () => `${seasons[rightIdx].key}-${rightIdx}`,
+    [rightIdx, seasons],
+  );
 
   // wiggle while hovered: small rotate back-and-forth; repeat only while hovered
   const wiggleHover = {
-    rotate: [-3, 3, -3],        // keyframes for a gentle wiggle
-    scale: 1.02,                // small scale up for emphasis
-  };
-  const wiggleTransition = {
-    duration: 0.7,
-    repeat: 0,
-    repeatType: "mirror",
-    ease: "easeInOut",
+    rotate: [-3, 3, -3],
+    scale: 1.02,
+    transition: {
+      duration: 0.6,
+      ease: "easeInOut",
+    },
   };
 
   return (
@@ -64,8 +68,8 @@ export default function SeasonCardsSection() {
               <span className="text-amber-400">Wildlife</span> Tourism
             </h2>
             <p className="mt-4 text-sm text-slate-700 max-w-md">
-              Observing animals in their natural habitats like tiger safaris or birdwatching.
-              Choose a season to discover the right experience.
+              Observing animals in their natural habitats like tiger safaris or
+              birdwatching. Choose a season to discover the right experience.
             </p>
             <button className="mt-6 bg-lime-400 text-teal-900 px-5 py-2 rounded-full font-semibold shadow hover:bg-lime-300 transition">
               View More
@@ -84,7 +88,10 @@ export default function SeasonCardsSection() {
             </button>
 
             {/* Two cards container: fixed minHeight prevents layout jumps */}
-            <div className="relative flex items-center justify-center gap-8 w-full" style={{ minHeight: 420 }}>
+            <div
+              className="relative flex items-center justify-center gap-8 w-full"
+              style={{ minHeight: 420 }}
+            >
               {/* LEFT CARD */}
               <AnimatePresence initial={false} mode="wait">
                 <motion.div
@@ -96,7 +103,7 @@ export default function SeasonCardsSection() {
                   className="w-72 md:w-[360px] bg-white rounded-[26px] shadow-xl overflow-hidden"
                   style={{ transformOrigin: "center" }}
                   whileHover={wiggleHover}
-                  transition={wiggleTransition}
+                  // transition={wiggleTransition}
                 >
                   <div className="w-full h-72 overflow-hidden">
                     <img
@@ -106,7 +113,9 @@ export default function SeasonCardsSection() {
                     />
                   </div>
                   <div className="py-3 text-center">
-                    <h3 className="text-lg font-semibold text-teal-800">{seasons[leftIdx].title}</h3>
+                    <h3 className="text-lg font-semibold text-teal-800">
+                      {seasons[leftIdx].title}
+                    </h3>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -122,7 +131,6 @@ export default function SeasonCardsSection() {
                   className="w-72 md:w-[360px] bg-white rounded-[26px] shadow-xl overflow-hidden"
                   style={{ transformOrigin: "center" }}
                   whileHover={wiggleHover}
-                  transition={wiggleTransition}
                 >
                   <div className="w-full h-72 overflow-hidden">
                     <img
@@ -132,7 +140,9 @@ export default function SeasonCardsSection() {
                     />
                   </div>
                   <div className="py-3 text-center">
-                    <h3 className="text-lg font-semibold text-teal-800">{seasons[rightIdx].title}</h3>
+                    <h3 className="text-lg font-semibold text-teal-800">
+                      {seasons[rightIdx].title}
+                    </h3>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -151,7 +161,9 @@ export default function SeasonCardsSection() {
 
         {/* bottom CTA */}
         <div className="mt-12 text-center">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-amber-400">TOUR CATEGORIES</h2>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-amber-400">
+            TOUR CATEGORIES
+          </h2>
         </div>
       </div>
 
