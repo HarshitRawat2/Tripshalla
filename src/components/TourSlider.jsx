@@ -367,7 +367,7 @@ export default function TourSlider() {
                       </span>
                       <div className="relative mb-1">
                         <span className="text-[9px] bg-white text-black px-2 py-0.5 rounded-sm font-black">
-                          SAVE INR SAVE INR {pkg.old_price - pkg.starting_price}
+                          SAVE INR {pkg.old_price - pkg.starting_price}
                         </span>
                       </div>
                     </div>
