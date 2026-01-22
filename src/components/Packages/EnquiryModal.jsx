@@ -20,7 +20,7 @@ export default function EnquiryModal({ isOpen, onClose, packageId }) {
         >
           {/* BACKDROP */}
           <div
-            className="absolute inset-0 bg-black/80"
+            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
             onClick={onClose}
           />
 
@@ -33,18 +33,19 @@ export default function EnquiryModal({ isOpen, onClose, packageId }) {
             className="relative z-10 w-full max-w-md"
           >
             {/* CLOSE BUTTON */}
-            <button
+            <motion.button
               onClick={onClose}
-              className="absolute -top-4 -right-4 bg-white p-2 rounded-full shadow-lg text-slate-500 hover:text-slate-700"
+              whileHover={{ rotate: 90, scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="absolute -top-4 -right-4
+             bg-white p-2 rounded-full
+             shadow-lg text-slate-500 hover:text-orange-600"
             >
               <X size={18} />
-            </button>
+            </motion.button>
 
             {/* CARD */}
-            <EnquiryCard
-              packageId={packageId}
-              onSuccess={onClose}
-            />
+            <EnquiryCard packageId={packageId} onSuccess={onClose} />
           </motion.div>
         </motion.div>
       )}

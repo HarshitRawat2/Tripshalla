@@ -42,7 +42,11 @@ export default function EnquiryCard({ onSuccess, packageId = null }) {
 
   return (
     <>
-      <div className="bg-white rounded-3xl p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+      <div
+        className="relative bg-white rounded-3xl p-6
+                shadow-[0_20px_60px_rgba(0,0,0,0.12)]
+                overflow-hidden isolate"
+      >
         {/* Header */}
         <div className="mb-5">
           <h3 className="text-lg font-bold text-slate-800">Get a Callback</h3>

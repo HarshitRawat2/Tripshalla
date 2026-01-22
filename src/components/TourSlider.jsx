@@ -187,7 +187,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Phone, Star } from "lucide-react";
 import { supabase } from "../lib/supabase";
+// import EnquiryModal from ".";
+
 import { useParams } from "react-router-dom";
+import EnquiryModal from "./Packages/EnquiryModal";
 const overlayByCategory = {
   overlayColor: "from-amber-900/90 via-amber-900/40 to-transparent",
 };
@@ -198,6 +201,8 @@ export default function TourSlider() {
 
   const scrollRef = useRef(null);
   const [packages, setPackages] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPackageId, setSelectedPackageId] = useState(null);
 
   useEffect(() => {
     fetchPackages();
@@ -371,9 +376,17 @@ export default function TourSlider() {
                       <button className="p-3 bg-white/10 hover:bg-orange-500 rounded-xl border border-white/20 transition-all flex items-center justify-center">
                         <Phone size={20} />{" "}
                       </button>{" "}
-                      <button className="flex-1 bg-white text-slate-900 font-bold py-3.5 rounded-xl hover:bg-orange-600 hover:text-white transition-all shadow-lg active:scale-95">
-                        Request Callback{" "}
-                      </button>{" "}
+                      <button
+                        onClick={() => {
+                          setSelectedPackageId(pkg.id);
+                          setIsModalOpen(true);
+                        }}
+                        className="flex-1 bg-white text-slate-900 font-bold py-3.5 rounded-xl
+             hover:bg-orange-600 hover:text-white transition-all shadow-lg
+             active:scale-95"
+                      >
+                        Request Callback
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -386,7 +399,20 @@ export default function TourSlider() {
           <ChevronRight />
         </button> */}
       </div>
+      {/* ENQUIRY MODAL — ADD HERE */}
+      <EnquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        packageId={selectedPackageId}
+      />
       {/* </div> */}
     </section>
   );
+}
+{
+  /* <EnquiryModal
+  isOpen={isModalOpen}
+  onClose={() => setIsModalOpen(false)}
+  packageId={selectedPackageId}
+/> */
 }

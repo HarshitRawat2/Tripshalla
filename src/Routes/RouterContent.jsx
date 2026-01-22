@@ -15,6 +15,7 @@ import HeroHeader from "../components/HeroHeader";
 import Packages from "../components/Packages";
 import Terms from "../components/Terms";
 import PrivacyPolicy from "../components/PrivacyPolicy";
+import CopyrightPolicy from "../components/CopyrightPolicy";
 
 // import Home from "./Pages/Home";
 // import Tour from "./components/Tour";
@@ -27,7 +28,7 @@ export default function RouterContent() {
   const location = useLocation();
 
   const isHome = location.pathname === "/";
-  const isPackage = location.pathname.startsWith("/packages") ;
+  const isPackage = location.pathname.startsWith("/packages");
   // const isTour = location.pathname.startsWith("/trek/");
 
   const isTour =
@@ -63,8 +64,9 @@ export default function RouterContent() {
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-         <Route path="/terms" element={<Terms/>} />
-         <Route path="/privacy" element={<PrivacyPolicy/>} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/copyright" element={<CopyrightPolicy />} />
       </Routes>
 
       <Footer />

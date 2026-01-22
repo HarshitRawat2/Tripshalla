@@ -1,117 +1,170 @@
-// TestimonialSection.jsx
-import React from "react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function TestimonialSection({
-  mainImage = "/src/assets/4.jpg",
-  avatars = [
-    "/src/assets/1.jpg",
-    "/src/assets/2.jpg",
-    "/src/assets/3.jpg",
-  ],
-  name = "Amelia Warner",
-  role = "tourist",
-  text = `Once the travel bug bites, there is no known antidote, 
-and I know that I shall be happily infected until the end of my life. 
-A journey is best measured in friends.`,
-}) {
+const testimonials = [
+  {
+    name: "Amelia Warner",
+    role: "Tourist",
+    image: "/src/assets/4.jpg",
+    avatars: ["/src/assets/1.jpg", "/src/assets/2.jpg", "/src/assets/3.jpg"],
+    text: `Once the travel bug bites, there is no known antidote. 
+    A journey is best measured in friends rather than miles.`,
+    rating: 5,
+  },
+  {
+    name: "Daniel Brooks",
+    role: "Adventure Lover",
+    image: "/src/assets/5.jpg",
+    avatars: ["/src/assets/2.jpg", "/src/assets/3.jpg", "/src/assets/1.jpg"],
+    text: `Everything was perfectly planned. From hotels to experiences,
+    it felt effortless and memorable.`,
+    rating: 5,
+  },
+  {
+    name: "Sophia Lee",
+    role: "Solo Traveller",
+    image: "/src/assets/6.jpg",
+    avatars: ["/src/assets/3.jpg", "/src/assets/1.jpg", "/src/assets/2.jpg"],
+    text: `I felt safe, excited, and inspired throughout my journey.
+    Highly recommended for solo travelers!`,
+    rating: 4,
+  },
+];
+
+export default function TestimonialSection() {
+  const [previewImage, setPreviewImage] = useState(null);
+
+  const [index, setIndex] = useState(0);
+  const t = testimonials[index];
+
+  const next = () => setIndex((i) => (i + 1) % testimonials.length);
+  const prev = () =>
+    setIndex((i) => (i === 0 ? testimonials.length - 1 : i - 1));
+
   return (
-    <section className="relative py-10  bg-white overflow-visible">
-      {/* Top small heading */}
-      <div className="text-center mb-4">
-        <h3 className="text-xl md:text-2xl font-semibold">
-          <span className="text-emerald-800">Our Client</span>{" "}
-          <span className="text-amber-500">Says !</span>
+    <section className="py-20 bg-white overflow-hidden">
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h3 className="text-2xl font-semibold">
+          <span className="text-emerald-800">Our Clients</span>{" "}
+          <span className="text-amber-500">Love Us</span>
         </h3>
-        <p className="text-slate-500 text-xs mt-2">
-          Destinations worth exploring! Here are a few popular spots
+        <p className="text-slate-500 text-sm mt-2">
+          Real stories from travelers across the world
         </p>
       </div>
 
-      {/* Large Gradient Heading + Plane */}
-      <div className="relative text-center mb-20">
-        <h1 className="text-[54px] md:text-[110px] font-extrabold tracking-wide bg-gradient-to-b from-emerald-800 to-amber-300 bg-clip-text text-transparent">
-          TESTIMONIAL
-        </h1>
-
-        
-      </div>
-
-      {/* Main content two-column */}
+      {/* Content */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        
-        {/* Left image */}
-        <div className="relative">
-          <div className="w-72 h-96 md:w-96 md:h-[480px] rounded-3xl overflow-hidden shadow-xl mx-auto">
-            <img
-              src={mainImage}
-              alt="client"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Light circle decoration */}
-          <div className="absolute -right-16 top-14 w-48 h-48 rounded-full bg-amber-200/40 blur-xl"></div>
-        </div>
-
-        {/* Right text area */}
-        <div>
-          {/* Small overlapping avatars */}
-          <div className="flex gap-4 mb-6">
-            {avatars.map((av, i) => (
-              <img
-                key={i}
-                src={av}
-                className="w-12 h-12 rounded-xl shadow-md object-cover"
-                alt="avatar"
-              />
-            ))}
-          </div>
-
-          {/* Name */}
-          <h3 className="text-xl md:text-2xl font-bold text-emerald-800">
-            {name}
-          </h3>
-
-          {/* Role */}
-          <p className="text-amber-500 text-sm mb-4">{role}</p>
-
-          {/* Quote + text */}
-          <div className="relative">
-            {/* Quote icon */}
-            <svg
-              className="absolute right-0 -top-6 w-8 h-8 text-emerald-700"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
+        {/* Image */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={t.image}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.4 }}
+            className="mx-auto"
+          >
+            <motion.div
+              className="w-80 h-[460px] rounded-3xl overflow-hidden shadow-xl cursor-zoom-in"
+              whileHover={{ scale: 1.02 }}
+              onClick={() => setPreviewImage(t.image)}
             >
-              <path d="M7 17a4 4 0 004-4V7a4 4 0 00-4-4H5a2 2 0 00-2 2v4h4v4H3v4h4zM19 17a4 4 0 004-4V7a4 4 0 00-4-4h-2a2 2 0 00-2 2v4h4v4h-4v4h4z" />
-            </svg>
+              <img
+                src={t.image}
+                alt={t.name}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
 
-            <p className="text-slate-600 leading-relaxed">{text}</p>
-          </div>
+        {/* Text */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={t.name}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+          >
+            {/* Avatars */}
+            <div className="flex gap-3 mb-6">
+              {t.avatars.map((av, i) => (
+                <motion.img
+                  key={i}
+                  src={av}
+                  alt=""
+                  onClick={() => setPreviewImage(av)}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-12 h-12 rounded-xl shadow-md object-cover cursor-zoom-in
+           hover:ring-2 hover:ring-amber-400 transition"
+                />
+              ))}
+            </div>
 
-          {/* Star rating */}
-          <div className="text-amber-400 text-xl mt-4 flex gap-1">
-            {"★★★★★".split("").map((s, i) => (
-              <span key={i}>★</span>
-            ))}
-          </div>
+            <h3 className="text-2xl font-bold text-emerald-800">{t.name}</h3>
+            <p className="text-amber-500 text-sm mb-4">{t.role}</p>
 
-          {/* Slider arrows */}
-          <div className="flex gap-4 mt-8">
-            {/* Left btn */}
-            <button className="w-10 h-10 rounded-full bg-amber-400 text-white flex items-center justify-center shadow-md hover:scale-105 transition">
-              ←
-            </button>
+            <p className="text-slate-600 leading-relaxed mb-6">{t.text}</p>
 
-            {/* Right btn */}
-            <button className="w-10 h-10 rounded-full bg-white text-amber-400 flex items-center justify-center shadow-md hover:scale-105 transition">
-              →
-            </button>
-          </div>
-        </div>
+            {/* Rating */}
+            <div className="flex gap-1 text-amber-400 text-xl mb-8">
+              {Array.from({ length: t.rating }).map((_, i) => (
+                <span key={i}>★</span>
+              ))}
+            </div>
+
+            {/* Controls */}
+            <div className="flex gap-4">
+              <button
+                onClick={prev}
+                className="w-11 h-11 rounded-full bg-amber-400 text-white shadow hover:scale-105 transition"
+              >
+                ←
+              </button>
+              <button
+                onClick={next}
+                className="w-11 h-11 rounded-full bg-white text-amber-400 shadow hover:scale-105 transition"
+              >
+                →
+              </button>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
+      <AnimatePresence>
+        {previewImage && (
+          <motion.div
+            className="fixed inset-0 z-[9999] bg-black/80 flex items-center justify-center px-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setPreviewImage(null)}
+          >
+            <motion.img
+              src={previewImage}
+              alt="Preview"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 260, damping: 22 }}
+              className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            {/* Close button */}
+            <button
+              onClick={() => setPreviewImage(null)}
+              className="absolute top-6 right-6 text-white text-3xl hover:scale-110 transition"
+            >
+              ×
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

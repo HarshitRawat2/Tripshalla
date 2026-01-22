@@ -38,9 +38,11 @@ export default function HeroHeader({
   ],
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  // const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
-    const location = useLocation();
-    const pathSegment = location.pathname.split("/").pop();
+  const location = useLocation();
+  const pathSegment = location.pathname.split("/").pop();
   // Auto-scroll logic
   useEffect(() => {
     const timer = setInterval(() => {
@@ -54,12 +56,12 @@ export default function HeroHeader({
   const prevSlide = () =>
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
-  const stats = [
-    { label: "TRIP ADVISOR", rating: "4.5/5", icon: "🦉" },
-    { label: "SITEJABBER", rating: "4.2/5", icon: "🚀" },
-    { label: "GOOGLE", rating: "4.4/5", icon: "G" },
-    { label: "REVIEWS.IO", rating: "4.6/5", icon: "★" },
-  ];
+  // const stats = [
+  //   { label: "TRIP ADVISOR", rating: "4.5/5", icon: "🦉" },
+  //   { label: "SITEJABBER", rating: "4.2/5", icon: "🚀" },
+  //   { label: "GOOGLE", rating: "4.4/5", icon: "G" },
+  //   { label: "REVIEWS.IO", rating: "4.6/5", icon: "★" },
+  // ];
 
   return (
     <header className="relative h-screen w-full bg-black">
@@ -78,7 +80,16 @@ export default function HeroHeader({
             className="h-full w-full object-cover opacity-70"
             alt="Hero Background"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
+          <div
+            className={`absolute inset-0 bg-gradient-to-t
+    from-black/80 via-black/40 to-transparent
+    ${isEnquiryOpen ? "" : "backdrop-blur-[2px]"}`}
+            style={{
+              maskImage: "linear-gradient(to top, black 60%, transparent 100%)",
+              WebkitMaskImage:
+                "linear-gradient(to top, black 60%, transparent 100%)",
+            }}
+          />
         </motion.div>
       </AnimatePresence>
 
@@ -161,10 +172,15 @@ export default function HeroHeader({
 
       {/* Bottom Ratings Bar */}
       {/* Bottom Ratings Bar with Soft Blur Transition */}
-      <div className="absolute bottom-0 w-full px-4 pb-10 pt-20">
-        {/* The Gradient Blur Overlay */}
+      <div
+        className={`absolute bottom-0 w-full px-4 pb-10 pt-20
+    ${isEnquiryOpen ? "pointer-events-none" : ""}`}
+      >
+        {/* ⛔ REMOVE blur when modal is open */}
         <div
-          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent backdrop-blur-[2px]"
+          className={`absolute inset-0 bg-gradient-to-t
+      from-black/80 via-black/40 to-transparent
+      ${isEnquiryOpen ? "" : "backdrop-blur-[2px]"}`}
           style={{
             maskImage: "linear-gradient(to top, black 60%, transparent 100%)",
             WebkitMaskImage:
@@ -172,28 +188,21 @@ export default function HeroHeader({
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto flex flex-wrap justify-around gap-8">
+        {/* <div className="relative z-10 max-w-7xl mx-auto flex flex-wrap justify-around gap-8">
           {stats.map((stat, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-4 group cursor-default"
-            >
-              {/* Icon with glass effect */}
-              <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white text-xl border border-white/5 group-hover:bg-white/20 transition-all">
+            <div key={i} className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
                 {stat.icon}
               </div>
-
-              <div className="text-left">
-                <p className="text-2xl font-bold text-white leading-none tracking-tight">
-                  {stat.rating}
-                </p>
-                <p className="text-[10px] text-gray-400 font-black tracking-[0.2em] mt-1.5 uppercase opacity-80">
+              <div>
+                <p className="text-2xl font-bold text-white">{stat.rating}</p>
+                <p className="text-[10px] text-gray-400 tracking-widest">
                   {stat.label}
                 </p>
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </header>
   );

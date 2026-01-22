@@ -206,19 +206,19 @@ export default function Header({
   bgImage = "/src/assets/9.jpg",
 }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const navLinks = links ||[
+  const navLinks = links || [
     { key: "home", label: "Home", to: "/" },
     { key: "about", label: "About", to: "/aboutus" },
-    { 
-      key: "packages", 
-      label: "Packages", 
+    {
+      key: "packages",
+      label: "Packages",
       // Removed 'to' so it doesn't navigate on click
       hasDropdown: true,
       subLinks: [
-        { label: "Camps", to: "/packages/camps" },
-        { label: "Treks", to: "/packages/treks" },
+        { label: "Camps", to: "/packages/camp" },
+        { label: "Treks", to: "/packages/trek" },
         { label: "Rafting", to: "/packages/rafting" },
-      ]
+      ],
     },
     { key: "destination", label: "Destination", to: "/destination" },
     { key: "tour", label: "Tour", to: "/tour" },
@@ -227,46 +227,54 @@ export default function Header({
   ];
 
   return (
-   <header className="relative w-full h-[70vh]  overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})` }} />
+    <header className="relative w-full h-[70vh]  overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      />
       <div className="absolute inset-0 bg-black/40" />
 
       <nav className="absolute top-6 left-0 right-0 z-40 px-6">
         <div className="max-w-7xl mx-auto bg-white backdrop-blur-md rounded-2xl shadow-md px-6 py-3 flex items-center justify-between">
-          
-          <ul className="hidden md:flex gap-6 items-center text-sm h-12"> {/* Fixed height for alignment */}
+          <ul className="hidden md:flex gap-6 items-center text-sm h-12">
+            {" "}
+            {/* Fixed height for alignment */}
             {navLinks.map((item) => (
-              <li 
-                key={item.key} 
+              <li
+                key={item.key}
                 className="relative h-full flex items-center group cursor-pointer"
                 onMouseEnter={() => item.hasDropdown && setIsDropdownOpen(true)}
-                onMouseLeave={() => item.hasDropdown && setIsDropdownOpen(false)}
+                onMouseLeave={() =>
+                  item.hasDropdown && setIsDropdownOpen(false)
+                }
               >
-               {item.hasDropdown ? (
-  /* Renders as a trigger that matches the style of other links */
-  <div className="flex items-center gap-1 text-slate-700 cursor-pointer text-sm font-medium transition-colors group-hover:text-amber-500">
-    {item.label}
-    <ChevronDown 
-      size={14} 
-      className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} 
-    />
-  </div>
-) : (
-  /* Standard links */
-  <NavLink
-    to={item.to}
-    className={({ isActive }) =>
-      `text-sm transition-all ${
-        isActive ? "text-amber-500 font-semibold" : "text-slate-700 font-medium"
-      } hover:text-amber-500`
-    }
-  >
-    {item.label}
-  </NavLink>
-)}
+                {item.hasDropdown ? (
+                  /* Renders as a trigger that matches the style of other links */
+                  <div className="flex items-center gap-1 text-slate-700 cursor-pointer text-sm font-medium transition-colors group-hover:text-amber-500">
+                    {item.label}
+                    <ChevronDown
+                      size={14}
+                      className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
+                    />
+                  </div>
+                ) : (
+                  /* Standard links */
+                  <NavLink
+                    to={item.to}
+                    className={({ isActive }) =>
+                      `text-sm transition-all ${
+                        isActive
+                          ? "text-amber-500 font-semibold"
+                          : "text-slate-700 font-medium"
+                      } hover:text-amber-500`
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                )}
                 {/* DROPDOWN MENU */}
                 {item.hasDropdown && isDropdownOpen && (
-                  <div 
+                  <div
                     className="absolute top-full left-0 w-48 bg-white border border-slate-100 rounded-xl shadow-2xl py-2 z-[60]"
                     // This ensures the menu stays open when mouse is over it
                     onMouseEnter={() => setIsDropdownOpen(true)}
@@ -276,19 +284,21 @@ export default function Header({
                         key={sub.to}
                         to={sub.to}
                         // This closes the menu after clicking a link
-                        onClick={() => setIsDropdownOpen(false)} 
-                        className={({ isActive }) => 
+                        onClick={() => setIsDropdownOpen(false)}
+                        className={({ isActive }) =>
                           `block px-4 py-2.5 text-xs font-bold uppercase transition-colors ${
-                            isActive ? "text-amber-600 bg-amber-50" : "text-slate-700 hover:bg-amber-50 hover:text-amber-600"
+                            isActive
+                              ? "text-amber-600 bg-amber-50"
+                              : "text-slate-700 hover:bg-amber-50 hover:text-amber-600"
                           }`
                         }
                       >
                         {sub.label}
-                     </NavLink>
+                      </NavLink>
                     ))}
                   </div>
                 )}
-                
+
                 {/* Underline decoration */}
                 <span className="absolute left-0 bottom-0 w-full h-[2px] bg-amber-400 scale-x-0 origin-left transition-transform duration-200 group-hover:scale-x-100" />
               </li>
@@ -442,5 +452,3 @@ export default function Header({
     </header>
   );
 }
-
-

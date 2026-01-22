@@ -1,83 +1,152 @@
 import React from "react";
+import LegalTabs from "./LegalTabs";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-slate-50 min-h-screen py-12 px-6">
-      <div className="max-w-5xl mx-auto bg-white rounded-[30px] shadow-sm border border-slate-100 p-8 md:p-16 text-slate-700">
-        
-        {/* Title Section */}
-        <div className="mb-10 border-b border-slate-100 pb-6">
-          <h1 className="text-3xl font-bold text-slate-900">Privacy Policy</h1>
-          <p className="text-sm text-slate-400 mt-2">Last updated: January 20th, 2016</p>
-        </div>
+    <>
+      {/* Top Legal Navigation */}
+      <LegalTabs />
 
-        <div className="space-y-8 leading-relaxed text-sm md:text-base">
-          
+      {/* Page Wrapper */}
+      <div className="bg-white min-h-screen">
+        {/* Header */}
+        <header className="border-b border-slate-200 bg-white">
+          <div className="max-w-6xl mx-auto px-6 py-14">
+            <h1 className="text-4xl font-semibold text-slate-900 tracking-tight">
+              Privacy Policy
+            </h1>
+            <p className="mt-2 text-sm text-slate-500">
+              Last updated: January 20, 2016
+            </p>
+
+            <div className="mt-6 max-w-4xl rounded-lg border border-amber-200 bg-amber-50 px-5 py-4 text-sm text-amber-900">
+              This Privacy Policy explains how Thrillophilia collects, uses,
+              stores, and protects your personal information.
+            </div>
+          </div>
+        </header>
+
+        {/* Content */}
+        <main className="max-w-6xl mx-auto px-6 py-16 space-y-20 text-slate-700 leading-relaxed">
           {/* Introduction */}
           <section>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              Introduction
+            </h2>
             <p>
-              This privacy policy is for www.thrillophilia.com and served by Thrillophilia tours and adventure pvt. ltd. and governs the privacy of its users who choose to use it.
+              This privacy policy applies to{" "}
+              <strong>www.thrillophilia.com</strong>
+              and is operated by Thrillophilia Tours and Adventure Pvt. Ltd.
             </p>
             <p className="mt-4">
-              The policy sets out the different areas where user privacy is concerned and outlines the obligations & requirements of the users, the website and website owners. Furthermore the way this website processes, stores and protects user data and information will also be detailed within this policy.
+              It explains how user privacy is handled, the responsibilities of
+              users and the website, and how personal information is processed,
+              stored, and protected.
             </p>
           </section>
 
           {/* The Website */}
           <section>
-            <h2 className="text-xl font-bold text-slate-900 mb-4">The Website</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              The Website
+            </h2>
             <p>
-              This website and its owners take a proactive approach to user privacy and ensure the necessary steps are taken to protect the privacy of its users throughout their visiting experience. This website complies to all India’s national laws and requirements for user privacy.
+              Thrillophilia takes a proactive approach to user privacy and
+              ensures appropriate measures are in place to safeguard user data.
+              The website complies with applicable Indian laws governing data
+              protection and privacy.
             </p>
           </section>
 
-          {/* Use of Cookies */}
-          <section>
-            <h2 className="text-xl font-bold text-slate-900 mb-4">Use of Cookies</h2>
+          {/* Cookies */}
+          <section className="rounded-xl border border-slate-200 bg-slate-50 p-10">
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              Use of Cookies
+            </h2>
             <p>
-              This website uses cookies to better the users experience while visiting the website. Where applicable this website uses a cookie control system allowing the user on their first visit to the website to allow or disallow the use of cookies on their computer / device. This complies with recent legislation requirements for websites to obtain explicit consent from users before leaving behind or reading files such as cookies on a user’s computer / device.
+              This website uses cookies to enhance user experience. Cookies are
+              small files stored on your device that help analyze website usage
+              and personalize content.
             </p>
             <p className="mt-4">
-              Cookies are small files saved to the user’s computers hard drive that track, save and store information about the user’s interactions and usage of the website. This allows the website, through its server to provide the users with a tailored experience within this website. Users are advised that if they wish to deny the use and saving of cookies from this website on to their computers hard drive they should take necessary steps within their web browsers security settings to block all cookies from this website and its external serving vendors.
+              Users may control or disable cookies through browser settings.
+              Disabling cookies may impact certain functionalities of the
+              website.
             </p>
             <p className="mt-4">
-              This website uses tracking software to monitor its visitors to better understand how they use it. This software is provided by Google Analytics which uses cookies to track visitor usage. The software will save a cookie to your computers hard drive in order to track and monitor your engagement and usage of the website, but will not store, save or collect personal information.
+              We use Google Analytics to understand visitor behavior. This tool
+              does not collect personal information and is used solely for
+              performance analysis.
             </p>
           </section>
 
-          {/* Email Newsletter */}
+          {/* Email Communication */}
           <section>
-            <h2 className="text-xl font-bold text-slate-900 mb-4">Email Newsletter</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              Email Communication
+            </h2>
             <p>
-              Although this website only looks to include quality, safe and relevant external links, users are advised adopt a policy of caution before clicking any external web links mentioned throughout this website.
+              Users who subscribe to our communications may receive emails
+              regarding updates, offers, or service-related notifications. You
+              may opt out of such communications at any time.
+            </p>
+          </section>
+
+          {/* External Links */}
+          <section>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              External Links
+            </h2>
+            <p>
+              This website may contain links to external websites. While we
+              strive to link only to quality and relevant resources, we are not
+              responsible for the privacy practices or content of external
+              sites.
+            </p>
+          </section>
+
+          {/* Advertising */}
+          <section>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              Adverts and Sponsored Links
+            </h2>
+            <p>
+              Sponsored links and advertisements may appear on the website.
+              These are served by advertising partners who may use cookies to
+              track referral data.
             </p>
             <p className="mt-4">
-              The owners of this website cannot guarantee or verify the contents of any externally linked website despite their best efforts. Users should therefore note they click on external links at their own risk and this website and its owners cannot be held liable for any damages or implications caused by visiting any external links mentioned.
+              Clicking on sponsored links is done at your own discretion, and
+              Thrillophilia is not responsible for any consequences arising from
+              visiting third-party websites.
             </p>
           </section>
 
-          {/* Adverts and Sponsored Links */}
+          {/* Social Media */}
           <section>
-            <h2 className="text-xl font-bold text-slate-900 mb-4">Adverts and Sponsored Links</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              Social Media Platforms
+            </h2>
             <p>
-              This website may contain sponsored links and adverts. These will typically be served through our advertising partners, to whom may have detailed privacy policies relating directly to the adverts they serve.
-            </p>
-            <p className="mt-4">
-              Clicking on any such adverts will send you to the advertisers website through a referral program which may use cookies and will track the number of referrals sent from this website. This may include the use of cookies which may in turn be saved on your computers hard drive. Users should therefore note they click on sponsored external links at their own risk and this website and its owners cannot be held liable for any damages or implications caused by visiting any external links mentioned.
+              Interactions on social media platforms are governed by the
+              respective platform’s privacy policies. Thrillophilia is not
+              responsible for user actions taken on third-party social networks.
             </p>
           </section>
 
-          {/* Social Media Platforms */}
-          <section>
-            <h2 className="text-xl font-bold text-slate-900 mb-4">Social Media Platforms</h2>
-            <p>
-              Communication, engagement and actions taken through external social media platforms that this website and its owners participate on are custom to the terms and conditions as well as the privacy policies held with each social media platform respectively.
+          {/* Footer */}
+          <section className="border-t border-slate-200 pt-12">
+            <p className="text-sm text-slate-500">
+              If you have questions regarding this Privacy Policy, please
+              contact Thrillophilia through official communication channels.
+            </p>
+            <p className="mt-6 text-xs text-slate-400">
+              © 2025 Thrillophilia. All rights reserved.
             </p>
           </section>
-
-        </div>
+        </main>
       </div>
-    </div>
+    </>
   );
 };
 

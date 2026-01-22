@@ -1,5 +1,16 @@
 @import "tailwindcss";
 .site-serif {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   letter-spacing: 0.06em;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.section-heading {
+  @apply text-2xl font-semibold text-slate-900 tracking-tight;
+}
+
+.section-text {
+  @apply mt-3 text-slate-700 leading-relaxed;
 }
