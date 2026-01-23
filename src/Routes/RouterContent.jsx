@@ -16,6 +16,7 @@ import Packages from "../components/Packages";
 import Terms from "../components/Terms";
 import PrivacyPolicy from "../components/PrivacyPolicy";
 import CopyrightPolicy from "../components/CopyrightPolicy";
+import Header3 from "../components/Header3";
 
 // import Home from "./Pages/Home";
 // import Tour from "./components/Tour";
@@ -29,6 +30,7 @@ export default function RouterContent() {
 
   const isHome = location.pathname === "/";
   const isPackage = location.pathname.startsWith("/packages");
+   const isAbout = location.pathname.startsWith("/aboutus"); 
   // const isTour = location.pathname.startsWith("/trek/");
 
   const isTour =
@@ -41,7 +43,7 @@ export default function RouterContent() {
         <BaseHeader />
       ) : isPackage ? ( // New condition for the cinematic hero
         <HeroHeader />
-      ) : (
+      ) : (isTour || isAbout)?(
         <Header
           variant={isTour ? "tour" : "default"}
           title={isTour ? "Kedarkantha Trek" : "ABOUT US"}
@@ -51,7 +53,8 @@ export default function RouterContent() {
           badges={isTour ? ["5 Days", "12,500 ft", "Easy–Moderate"] : []}
           bgImage={isTour ? "/src/assets/1.jpg" : "/src/assets/9.jpg"}
         />
-      )}
+      ): <Header3/>}
+      
 
       {/* ===== ROUTES ===== */}
       <Routes>
