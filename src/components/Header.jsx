@@ -205,9 +205,8 @@ export default function Header({
   title = "ABOUT US",
   subtitle,
   badges = [],
-  bgImage = "/src/assets/9.jpg",
+  bgImage = "/src/assets/11.jpg",
 }) {
- 
   const navLinks = links || [
     { key: "home", label: "Home", to: "/" },
     { key: "about", label: "About", to: "/aboutus" },

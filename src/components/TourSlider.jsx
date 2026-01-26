@@ -433,10 +433,11 @@ const overlayByCategory = {
   overlayColor: "from-amber-900/90 via-amber-900/40 to-transparent",
 };
 
-export default function TourSlider() {
-  const { category } = useParams();
+export default function TourSlider({ category: propCategory }) {
+  // const { category } = useParams();
+  const params = useParams();
   const navigate = useNavigate(); // Initialize navigate hook
-  const resolvedCategory = category || "trek";
+  const resolvedCategory = propCategory || params.category || "trek";
 
   const scrollRef = useRef(null);
   const [packages, setPackages] = useState([]);

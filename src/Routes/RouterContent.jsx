@@ -18,6 +18,7 @@ import PrivacyPolicy from "../components/PrivacyPolicy";
 import CopyrightPolicy from "../components/CopyrightPolicy";
 import Header3 from "../components/Header3";
 import { useState } from "react";
+import StickyContactButtons from "../components/StickyContactButtons";
 
 // import Home from "./Pages/Home";
 // import Tour from "./components/Tour";
@@ -36,7 +37,7 @@ export default function RouterContent() {
 
   const isTour =
     location.pathname === "/tour" || location.pathname.startsWith("/trek/");
- const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   return (
     <>
       {/* ===== HEADER CONTROL ===== */}
@@ -46,8 +47,8 @@ export default function RouterContent() {
         <HeroHeader />
       ) : isTour || isAbout ? (
         <Header
-        isDropdownOpen={isDropdownOpen}
-        setIsDropdownOpen={setIsDropdownOpen}
+          isDropdownOpen={isDropdownOpen}
+          setIsDropdownOpen={setIsDropdownOpen}
           variant={isTour ? "tour" : "default"}
           title={isTour ? "Kedarkantha Trek" : "ABOUT US"}
           subtitle={
@@ -58,8 +59,9 @@ export default function RouterContent() {
         />
       ) : (
         <Header3
-         isDropdownOpen={isDropdownOpen}
-        setIsDropdownOpen={setIsDropdownOpen} />
+          isDropdownOpen={isDropdownOpen}
+          setIsDropdownOpen={setIsDropdownOpen}
+        />
       )}
 
       {/* ===== ROUTES ===== */}
@@ -78,7 +80,7 @@ export default function RouterContent() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/copyright" element={<CopyrightPolicy />} />
       </Routes>
-
+      <StickyContactButtons />
       <Footer />
     </>
   );

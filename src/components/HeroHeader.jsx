@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import EnquiryModal from "./Packages/EnquiryModal";
 import { useLocation, useParams } from "react-router-dom";
+// import HeroSearch from "./HeroSearch";
 export default function HeroHeader({
   slides = [
     {
@@ -203,6 +204,7 @@ export default function HeroHeader({
             </div>
           ))}
         </div> */}
+        {/* <HeroSearch /> */}
       </div>
     </header>
   );

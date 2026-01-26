@@ -55,12 +55,16 @@
 import { BrowserRouter } from "react-router-dom";
 import RouterContent from "./Routes/RouterContent";
 import ScrollToTop from "./components/ScrollToTop";
+import StickyContactButtons from "./components/StickyContactButtons";
+import StickyWhatsApp from "./components/Packages/StickyWhatsappButton";
 // import RouterContent from "./RouterContent";
 
 export default function App() {
   return (
     <BrowserRouter>
-    <ScrollToTop/>
+      <ScrollToTop />
+      {/* <StickyContactButtons /> */}
+      <StickyWhatsApp />
       <RouterContent />
     </BrowserRouter>
   );
