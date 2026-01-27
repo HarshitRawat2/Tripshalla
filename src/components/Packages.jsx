@@ -1,13 +1,26 @@
 import React, { useState } from "react";
 import IndiaPackagesDescription from "./IndiaPackagesDescription";
-import TourSlider from "./TourSlider";
+// import TourSlider from "./PackageGrid";
 import GroupOfferBanner from "./GroupOfferBanner";
 import EnquiryModal from "./Packages/EnquiryModal";
 import WhyChooseHimalayan from "./WhyChooseHimalayan";
 import PopularActivitiesCardGrid from "./PopularActivitiesCardGrid";
+import PackageFilters from "./PackageFilter";
+import PackageGrid from "./PackageGrid";
+import ResultsSummary from "./ResultSummary";
+import TrustAssuranceStrip from "./TrustAssuranceStrip";
+import PackageFAQs from "./PackageFAQs";
 
 export default function Packages() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+  const [filters, setFilters] = useState({
+    search: "",
+    budget: 100000, // High value = no filter
+    duration: [],
+    difficulty: [],
+    sortBy: "popularity",
+  });
+  const [resultCount, setResultCount] = useState(null);
 
   return (
     <div className="w-full">
@@ -15,10 +28,24 @@ export default function Packages() {
       <section className="pt-16">
         <IndiaPackagesDescription />
       </section>
-      {/* PACKAGES SLIDER */}
-      <section className="pb-2">
-        <TourSlider />
+      {/* 🔍 FILTER BAR */}
+      <section className=" max-w-7xl mx-auto px-6 mt-8">
+        <PackageFilters filters={filters} setFilters={setFilters} />
       </section>
+
+      <section className="max-w-7xl mx-auto px-6 mt-10">
+        <PackageGrid filters={filters} />
+      </section>
+
+      {/* 📦 PACKAGE GRID */}
+      {/* <section className="max-w-7xl mx-auto px-6 mt-10">
+        <PackageGrid filters={filters} />
+      </section> */}
+      {/* PACKAGES SLIDER */}
+      {/* <section className="pb-2">
+        <TourSlider />
+      </section> */}
+
       {/* SOFT DIVIDER */}
       <div className="max-w-7xl mx-auto px-6">
         <div className="my-10 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
@@ -28,7 +55,7 @@ export default function Packages() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="my-10 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
       </div>
-    <PopularActivitiesCardGrid/>
+      <PopularActivitiesCardGrid />
       <div className="max-w-7xl mx-auto px-6">
         <div className="my-10 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
       </div>
@@ -36,6 +63,10 @@ export default function Packages() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="my-10 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
       </div>
+      <TrustAssuranceStrip />
+      <section className="max-w-7xl mx-auto px-6 mt-20">
+        <PackageFAQs title="Packages FAQs" />
+      </section>
       {/* MODAL */}
       <EnquiryModal
         isOpen={isEnquiryOpen}

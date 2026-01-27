@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import TourSlider from "./TourSlider";
 import BookingTrustCard from "./BookingTrustCard";
-import TourSlider from "./TourSlider";
+import TourSlider from "./PackageGrid";
 
 const categories = [
   { key: "trek", label: "Treks" },
