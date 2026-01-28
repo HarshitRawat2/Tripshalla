@@ -3,6 +3,7 @@ import { Phone, Star } from "lucide-react";
 import { supabase } from "../lib/supabase";
 import { useParams, useNavigate } from "react-router-dom";
 import EnquiryModal from "./Packages/EnquiryModal";
+import { motion } from "framer-motion";
 
 const overlayByCategory = {
   overlayColor: "from-amber-900/90 via-amber-900/40 to-transparent",
@@ -12,7 +13,7 @@ export default function PackageGrid({
   filters = {},
   setFilters,
   category: propCategory,
-   onCountChange, // 👈 ADD THIS
+  onCountChange, // 👈 ADD THIS
 }) {
   const params = useParams();
   const navigate = useNavigate();
@@ -178,14 +179,20 @@ export default function PackageGrid({
         >
           {filteredPackages.map((pkg) => (
             <div
+              whileTap={{ scale: 0.97 }}
               key={pkg.id}
               onClick={() => navigate(`/trek/${pkg.slug}`)}
-              className="h-[520px] relative rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
+              className=" relative rounded-2xl overflow-hidden shadow-lg cursor-pointer group h-[480px] sm:h-[500px] xl:h-[540px]"
             >
               <img
                 src={pkg.image}
                 alt={pkg.name}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className="
+  absolute inset-0 w-full h-full object-cover
+  transition-transform duration-500
+  group-hover:scale-110
+  active:scale-105
+"
               />
 
               <div
@@ -235,7 +242,12 @@ export default function PackageGrid({
                       setSelectedPackageId(pkg.id);
                       setIsModalOpen(true);
                     }}
-                    className="flex-1 bg-white text-slate-900 font-bold py-3 rounded-xl hover:bg-orange-600 hover:text-white"
+                    className="
+  flex-1 bg-white text-slate-900 font-semibold
+  py-2.5 sm:py-3 rounded-xl
+  hover:bg-orange-600 hover:text-white
+  active:scale-95 transition
+"
                   >
                     Request Callback
                   </button>

@@ -80,7 +80,7 @@ export default function RouterContent() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/copyright" element={<CopyrightPolicy />} />
       </Routes>
-      <StickyContactButtons />
+      {/* <StickyContactButtons /> */}
       <Footer />
     </>
   );

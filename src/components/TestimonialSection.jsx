@@ -55,7 +55,7 @@ export default function TestimonialSection() {
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
         {/* Image */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -64,10 +64,13 @@ export default function TestimonialSection() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.4 }}
-            className="mx-auto"
+            className="mx-auto order-1 md:order-none"
           >
             <motion.div
-              className="w-80 h-[460px] rounded-3xl overflow-hidden shadow-xl cursor-zoom-in"
+              className=" w-64 h-[320px]
+    sm:w-72 sm:h-[380px]
+    md:w-80 md:h-[460px]
+    rounded-3xl overflow-hidden shadow-xl cursor-zoom-in"
               whileHover={{ scale: 1.02 }}
               onClick={() => setPreviewImage(t.image)}
             >
@@ -88,6 +91,7 @@ export default function TestimonialSection() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
+            className="order-2 md:order-none "
           >
             {/* Avatars */}
             <div className="flex gap-3 mb-6">
