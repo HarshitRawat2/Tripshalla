@@ -19,7 +19,6 @@ export default function BaseHeader({ links }) {
   return (
     <nav className="absolute top-0 left-0 right-0 z-[100] px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-24 relative">
-        
         {/* BIG LOGO */}
         <div className="flex-shrink-0 relative z-[110]">
           <NavLink to="/">
@@ -39,7 +38,9 @@ export default function BaseHeader({ links }) {
                 to={l.to}
                 className={({ isActive }) =>
                   `transition-all duration-200 ${
-                    isActive ? "text-amber-400" : "text-white hover:text-amber-400"
+                    isActive
+                      ? "text-amber-400"
+                      : "text-white hover:text-amber-400"
                   }`
                 }
               >
@@ -51,12 +52,12 @@ export default function BaseHeader({ links }) {
 
         {/* RIGHT SECTION: Search & Hamburger */}
         <div className="flex items-center gap-4 relative z-[110]">
-          <button className="text-white hover:text-amber-400 transition p-2">
+          {/* <button className="text-white hover:text-amber-400 transition p-2">
             <FiSearch className="w-6 h-6" />
-          </button>
+          </button> */}
 
           {/* Mobile Toggle Button - Forced to Right */}
-          <button 
+          <button
             onClick={() => setIsMenuOpen(true)}
             className="lg:hidden text-white hover:text-amber-400 transition p-2 focus:outline-none"
           >
@@ -66,7 +67,7 @@ export default function BaseHeader({ links }) {
       </div>
 
       {/* MOBILE OVERLAY (Click to Close) */}
-      <div 
+      <div
         className={`fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
@@ -74,7 +75,7 @@ export default function BaseHeader({ links }) {
       />
 
       {/* MOBILE DRAWER (SLIDING FROM RIGHT) */}
-      <div 
+      <div
         className={`fixed top-0 right-0 h-full w-[300px] bg-white text-slate-900 z-[150] shadow-2xl transform transition-transform duration-500 ease-in-out lg:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
@@ -82,8 +83,13 @@ export default function BaseHeader({ links }) {
         <div className="flex flex-col h-full p-8 pt-10">
           {/* Close Button Inside Drawer */}
           <div className="flex justify-between items-center mb-12">
-            <span className="font-black text-emerald-800 italic text-xl">travlla</span>
-            <button onClick={() => setIsMenuOpen(false)} className="text-slate-900 p-2">
+            <span className="font-black text-emerald-800 italic text-xl">
+              travlla
+            </span>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="text-slate-900 p-2"
+            >
               <FiX className="w-8 h-8" />
             </button>
           </div>
@@ -104,8 +110,6 @@ export default function BaseHeader({ links }) {
               </li>
             ))}
           </ul>
-
-         
         </div>
       </div>
     </nav>
