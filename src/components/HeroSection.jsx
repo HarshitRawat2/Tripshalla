@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
   return (
     <section className="relative h-[90vh] w-full overflow-hidden">
       {/* Background Image */}
@@ -33,12 +35,17 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            
-            <button className="bg-amber-400 text-teal-900 px-6 py-3 rounded-full font-semibold hover:bg-amber-300 transition">
+            <button
+              onClick={() => navigate("/packages/trek")}
+              className="bg-amber-400 text-teal-900 px-6 py-3 rounded-full font-semibold hover:bg-amber-300 transition"
+            >
               Explore Treks
             </button>
 
-            <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-teal-900 transition">
+            <button
+              onClick={() => navigate("/packages")}
+              className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-teal-900 transition"
+            >
               View Packages
             </button>
           </div>

@@ -4,15 +4,15 @@ import { useNavigate } from "react-router-dom";
 
 const categories = [
   {
-    title: "Treks",
+    title: "Trek",
     icon: Mountain,
-    slug: "/packages/treks",
+    slug: "/packages/trek",
     desc: "Himalayan treks & guided trails",
   },
   {
-    title: "Camping",
+    title: "Campings",
     icon: Tent,
-    slug: "/packages/camping",
+    slug: "/packages/campings",
     desc: "Riverside & alpine camps",
   },
   {

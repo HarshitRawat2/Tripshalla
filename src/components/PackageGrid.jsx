@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, useRef } from "react";
 import { Phone, Star } from "lucide-react";
 import { supabase } from "../lib/supabase";
 import { useParams, useNavigate } from "react-router-dom";
@@ -16,6 +16,13 @@ export default function PackageGrid({
   category: propCategory,
   onCountChange, // 👈 ADD THIS
 }) {
+  const getInitialLimit = () => {
+    if (window.innerWidth < 640) return 3; // mobile
+    if (window.innerWidth < 1024) return 4; // tablet
+    return 6; // desktop
+  };
+  const [visibleCount, setVisibleCount] = useState(getInitialLimit);
+
   const params = useParams();
   const navigate = useNavigate();
   const resolvedCategory = propCategory || params.category || "trek";
@@ -24,14 +31,16 @@ export default function PackageGrid({
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPackageId, setSelectedPackageId] = useState(null);
+  const gridTopRef = useRef(null);
 
   /* ---------------- FETCH PACKAGES ---------------- */
   useEffect(() => {
     fetchPackages();
   }, [resolvedCategory]);
 
-
-
+  useEffect(() => {
+    setVisibleCount(getInitialLimit());
+  }, [resolvedCategory]);
   async function fetchPackages() {
     setLoading(true);
 
@@ -121,30 +130,28 @@ export default function PackageGrid({
   /* ---------------- UI ---------------- */
   return (
     <section className="max-w-7xl mx-auto px-6 py-12">
+      {/* ✅ SCROLL ANCHOR */}
+      <div ref={gridTopRef} />
       {/* HEADING */}
-  <div className="mb-8 md:mb-10 px-2">
-  <h2 className="text-2xl md:text-3xl font-bold text-slate-800 leading-tight">
-    {/* Use inline-flex and items-baseline to keep text on the same visual line */}
-    <span className="inline-flex flex-wrap items-baseline gap-x-2">
-      <span className="text-orange-500 whitespace-nowrap">
-        {resolvedCategory.toUpperCase()}
-      </span>
-      <span className="text-slate-800">
-        Packages of the Week ✨
-      </span>
-    </span>
-  </h2>
-  
-  <p className="text-gray-400 text-xs md:text-sm mt-2 flex items-center gap-1">
-    <span className="inline-block w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-    Price updated as of 21st Jan
-  </p>
-</div>
+      <div className="mb-8 md:mb-10 px-2">
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-800 leading-tight">
+          {/* Use inline-flex and items-baseline to keep text on the same visual line */}
+          <span className="inline-flex flex-wrap items-baseline gap-x-2">
+            <span className="text-orange-500 whitespace-nowrap">
+              {resolvedCategory.toUpperCase()}
+            </span>
+            <span className="text-slate-800">Packages of the Week ✨</span>
+          </span>
+        </h2>
+
+        <p className="text-gray-400 text-xs md:text-sm mt-2 flex items-center gap-1">
+          <span className="inline-block w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+          Price updated as of 21st Jan
+        </p>
+      </div>
 
       {/* LOADING */}
-      {loading && (
-        <AdventureLoader/>
-      )}
+      {loading && <AdventureLoader />}
 
       {/* NO RESULTS */}
       {!loading && filteredPackages.length === 0 && (
@@ -177,95 +184,149 @@ export default function PackageGrid({
 
       {/* GRID */}
       {!loading && filteredPackages.length > 0 && (
-        <div
-          className="
+        <>
+          <div
+            className="
             grid gap-8
             grid-cols-1
             sm:grid-cols-2
             xl:grid-cols-3
           "
-        >
-          {filteredPackages.map((pkg) => (
-            <div
-              whileTap={{ scale: 0.97 }}
-              key={pkg.id}
-              onClick={() => navigate(`/trek/${pkg.slug}`)}
-              className=" relative rounded-2xl overflow-hidden shadow-lg cursor-pointer group h-[480px] sm:h-[500px] xl:h-[540px]"
-            >
-              <img
-                src={pkg.image}
-                alt={pkg.name}
-                className="
+          >
+            {filteredPackages.slice(0, visibleCount).map((pkg) => (
+              <motion.div
+                key={pkg.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => navigate(`/trek/${pkg.slug}`)}
+                className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer group h-[460px] sm:h-[500px] xl:h-[540px]"
+              >
+                <img
+                  src={pkg.image}
+                  alt={pkg.name}
+                  className="
   absolute inset-0 w-full h-full object-cover
   transition-transform duration-500
   group-hover:scale-110
   active:scale-105
 "
-              />
+                />
 
-              <div
-                className={`absolute inset-0 bg-gradient-to-t ${overlayByCategory.overlayColor}`}
-              />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t ${overlayByCategory.overlayColor}`}
+                />
 
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                <div className="flex justify-between mb-3">
-                  <span className="text-xs bg-black/30 px-3 py-1 rounded-full">
-                    {pkg.duration_days} Days
-                  </span>
-                  <span className="flex items-center gap-1 text-xs bg-black/30 px-2 py-1 rounded-full">
-                    <Star
-                      size={14}
-                      className="text-yellow-400 fill-yellow-400"
-                    />
-                    {pkg.rating}
-                  </span>
-                </div>
+                <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                  <div className="flex justify-between mb-3">
+                    <span className="text-xs bg-black/30 px-3 py-1 rounded-full">
+                      {pkg.duration_days} Days
+                    </span>
+                    <span className="flex items-center gap-1 text-xs bg-black/30 px-2 py-1 rounded-full">
+                      <Star
+                        size={14}
+                        className="text-yellow-400 fill-yellow-400"
+                      />
+                      {pkg.rating}
+                    </span>
+                  </div>
 
-                <h3 className="text-xl font-bold mb-2">{pkg.name}</h3>
-                <p className="text-xs opacity-80 mb-4">{pkg.tagline}</p>
+                  <h3 className="text-xl font-bold mb-2">{pkg.name}</h3>
+                  <p className="text-xs opacity-80 mb-4">{pkg.tagline}</p>
 
-                <div className="flex items-end gap-2 mb-4">
-                  <span className="text-2xl font-black italic">
-                    ₹{pkg.starting_price}
-                  </span>
-                  <span className="text-xs line-through opacity-60">
-                    ₹{pkg.old_price}
-                  </span>
-                </div>
+                  <div className="flex items-end gap-2 mb-4">
+                    <span className="text-2xl font-black italic">
+                      ₹{pkg.starting_price}
+                    </span>
+                    <span className="text-xs line-through opacity-60">
+                      ₹{pkg.old_price}
+                    </span>
+                  </div>
 
-                <div className="flex gap-3">
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.location.href = "tel:+91XXXXXXXXXX";
-                    }}
-                    className="p-3 bg-white/10 hover:bg-orange-500 rounded-xl"
-                  >
-                    <Phone size={20} />
-                  </button>
+                  <div className="flex gap-3">
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.location.href = "tel:+91XXXXXXXXXX";
+                      }}
+                      className="p-3 bg-white/10 hover:bg-orange-500 rounded-xl"
+                    >
+                      <Phone size={20} />
+                    </button>
 
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedPackageId(pkg.id);
-                      setIsModalOpen(true);
-                    }}
-                    className="
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedPackageId(pkg.id);
+                        setIsModalOpen(true);
+                      }}
+                      className="
   flex-1 bg-white text-slate-900 font-semibold
   py-2.5 sm:py-3 rounded-xl
   hover:bg-orange-600 hover:text-white
   active:scale-95 transition
 "
-                  >
-                    Request Callback
-                  </button>
+                    >
+                      Request Callback
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
+            ))}
+          </div>
+          {filteredPackages.length > visibleCount && (
+            <div className="mt-14 flex justify-center">
+              <button
+                onClick={() =>
+                  setVisibleCount((c) => c + (window.innerWidth < 640 ? 3 : 6))
+                }
+                className="
+        px-8 py-3 rounded-full
+        bg-orange-500 text-white font-semibold
+        shadow-lg
+        hover:bg-orange-600
+        active:scale-95 transition
+      "
+              >
+                Show More Packages ↓
+              </button>
             </div>
-          ))}
-        </div>
+          )}
+          {visibleCount > getInitialLimit() && (
+            <div className="mt-8 flex justify-center">
+              <button
+                type="button"
+                onClick={() => {
+                  setVisibleCount(getInitialLimit());
+                  requestAnimationFrame(() => {
+                    gridTopRef.current?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  });
+                }}
+                className="
+        inline-flex items-center gap-2
+        px-6 py-2.5
+        rounded-full
+        bg-slate-100 text-slate-600
+        text-sm font-medium
+        shadow-sm
+        hover:bg-orange-50 hover:text-orange-600
+        active:scale-95
+        transition-all
+      "
+              >
+                ↑ Show less packages
+              </button>
+            </div>
+          )}
+        </>
       )}
-
+      {/* show less */}
       {/* MODAL */}
       <EnquiryModal
         isOpen={isModalOpen}

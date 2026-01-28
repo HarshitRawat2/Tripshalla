@@ -335,9 +335,12 @@ export default function Tour() {
     }
   }
 
-  if (loading) return <div className="p-10">
-    <AdventureLoader/>
-  </div>;
+  if (loading)
+    return (
+      <div className="p-10">
+        <AdventureLoader />
+      </div>
+    );
   if (!pkg) return <div className="p-10">Trek not found</div>;
   return (
     <main className="bg-[#FAFAFA]">

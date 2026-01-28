@@ -88,7 +88,13 @@ export default function ExplorationGrid({ media = [] }) {
             variants={containerVariants}
             initial="hidden"
             animate={controls}
-            className="grid grid-cols-1 md:grid-cols-4 gap-5 h-[640px]"
+            // className="grid grid-cols-1 md:grid-cols-4 gap-5 h-[640px]"
+            className="
+  grid gap-4
+  grid-cols-1
+  md:grid-cols-4 md:grid-rows-2
+  md:h-[640px]
+"
           >
             {/* HERO IMAGE */}
             <motion.div
