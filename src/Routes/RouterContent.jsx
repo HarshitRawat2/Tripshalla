@@ -19,6 +19,7 @@ import CopyrightPolicy from "../components/CopyrightPolicy";
 import Header3 from "../components/Header3";
 import { useState } from "react";
 import StickyContactButtons from "../components/StickyContactButtons";
+import { HiGlobeAlt } from "react-icons/hi2";
 
 // import Home from "./Pages/Home";
 // import Tour from "./components/Tour";
@@ -85,3 +86,6 @@ export default function RouterContent() {
     </>
   );
 }
+array.forEach(element => {
+   HiGlobeAlt
+});
