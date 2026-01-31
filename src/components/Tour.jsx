@@ -26,7 +26,9 @@ export default function Tour() {
   const [media, setMedia] = useState([]);
   const [loading, setLoading] = useState(true);
   const [itinerary, setItinerary] = useState([]);
-  const [pricing, setPricing] = useState(null);
+  // const [pricing, setPricing] = useState(null);
+  const [pricingOptions, setPricingOptions] = useState([]);
+
   const [policies, setPolicies] = useState([]);
   const [faqs, setFaqs] = useState([]);
   const [inclusions, setInclusions] = useState([]);
@@ -155,7 +157,7 @@ export default function Tour() {
 
       setPolicies([]);
       setFaqs([]);
-      setPricing(null);
+      // setPricing(null);
 
       /* =======================
        1️⃣ PACKAGE
@@ -180,18 +182,29 @@ export default function Tour() {
       /* =======================
    4️⃣ FETCH PACKAGE PRICING
 ======================= */
+      // const { data: pricingData, error: pricingError } = await supabase
+      //   .from("package_pricing_options")
+      //   .select("*")
+      //   .eq("package_id", packageData.id)
+      //   .order("order_no", { ascending: true })
+      //   .limit(1)
+      //   .single();
+
+      // if (pricingError) {
+      //   console.warn("PRICING ERROR:", pricingError);
+      // } else {
+      //   setPricing(pricingData);
+      // }
       const { data: pricingData, error: pricingError } = await supabase
         .from("package_pricing_options")
         .select("*")
         .eq("package_id", packageData.id)
-        .order("order_no", { ascending: true })
-        .limit(1)
-        .single();
+        .order("order_no", { ascending: true });
 
       if (pricingError) {
-        console.warn("PRICING ERROR:", pricingError);
+        console.error("❌ PRICING ERROR", pricingError);
       } else {
-        setPricing(pricingData);
+        setPricingOptions(pricingData || []);
       }
 
       /* =======================
@@ -398,7 +411,9 @@ export default function Tour() {
       setLoading(false);
     }
   }
-
+  const bestPricing = pricingOptions
+    .slice()
+    .sort((a, b) => a.final_price - b.final_price)[0];
   if (loading)
     return (
       <div className="p-10">
@@ -443,7 +458,7 @@ export default function Tour() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* LEFT CONTENT */}
           <div className="lg:col-span-2 space-y-14">
-            <TourDetails
+            {/* <TourDetails
               title={pkg.name}
               highlight={packageDetails?.tagline}
               summary={[
@@ -473,6 +488,29 @@ export default function Tour() {
                   : []
               }
               details={packageDetails}
+            /> */}
+            <TourDetails
+              title={pkg.name}
+              highlight={pkg.tagline}
+              summary={[
+                `${pkg.duration_days} Days`,
+                pkg.difficulty || "Easy",
+                pkg.type.toUpperCase(),
+              ]}
+              amenities={[
+                { icon: <HiOutlineHome />, label: "Luxury Stay" },
+                { icon: <HiOutlineCake />, label: "Meals Included" },
+                { icon: <HiOutlineMap />, label: "Riverside Location" },
+              ]}
+              durations={pricingOptions.map((p) => ({
+                id: p.id,
+                title: p.title,
+                final_price: p.final_price,
+                image:
+                  media.find((m) => m.media_role === "pricing")?.media_url ||
+                  media.find((m) => m.media_role === "cover")?.media_url,
+              }))}
+              details={packageDetails}
             />
 
             {/* 🔴 STICKY MUST STOP HERE */}
@@ -490,7 +528,7 @@ export default function Tour() {
             <div className="h-full flex flex-col">
               {/* Normal cards */}
               <div className="space-y-8 mb-8">
-                <PriceCard pricing={pricing} />
+                <PriceCard pricing={bestPricing} />
                 <GotAQuestionCard />
                 <GroupOfferCard />
                 <WhyChooseUs />
