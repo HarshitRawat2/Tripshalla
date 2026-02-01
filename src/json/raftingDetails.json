@@ -1,0 +1,704 @@
+{
+  "brahmpuri-rafting": {
+    "id": 101,
+    "slug": "brahmpuri-rafting",
+    "name": "Brahmpuri Club Rafting",
+    "location": "Brahmpuri to Rishikesh",
+    "river": "River Ganga",
+    "distance": "9 Kilometres",
+    "grade": "Grade I–II",
+    "duration": "1.5 – 2 Hours",
+    "starting_point": "Brahmpuri",
+    "ending_point": "NIM Beach / Rishikesh",
+    "best_season": "September to June",
+    "minimum_age": 12,
+    "fitness_level": "Basic fitness required",
+
+    "ideal_for": [
+      "First-time rafters",
+      "Families",
+      "School groups",
+      "Kids (12+)",
+      "Non-swimmers"
+    ],
+
+    "price": "600",
+    "oldPrice": "1,000",
+
+    "tagline": "The safest and most enjoyable rafting experience for beginners with calm waters and fun rapids.",
+
+    "overview": "Brahmpuri rafting is the most beginner-friendly stretch on the River Ganga. This route combines calm river flow with small, playful rapids, making it perfect for families, children, and first-time rafters. The stretch allows participants to learn paddling techniques, understand river behavior, and enjoy body surfing under expert supervision.",
+
+    "media": [
+      {
+        "media_url": "/src/assets/21.jpg",
+        "media_role": "hero_banner"
+      },
+      {
+        "media_url": "/src/assets/22.jpg",
+        "media_role": "gallery"
+      }
+    ],
+
+    "rapids": [
+      {
+        "name": "Sweet Sixteen",
+        "grade": "Grade I",
+        "difficulty": "Very Easy",
+        "rapid_type": "Introductory Wave Train",
+        "why_this_name": "The rapid is named 'Sweet Sixteen' because of its smooth, gentle waves that feel exciting yet harmless — much like a sweet introduction to rafting, especially for beginners.",
+        "description": "Sweet Sixteen is the first rapid most rafters encounter on this stretch. It consists of small rolling waves that gently rock the raft without strong turbulence. This rapid helps first-time rafters get comfortable with paddling, balance, and water movement.",
+        "what_to_expect": [
+          "Small splashy waves",
+          "Very stable raft movement",
+          "Ideal for learning paddling commands"
+        ],
+        "safety_notes": "Extremely safe rapid with minimal risk. Perfect for children and nervous participants."
+      },
+      {
+        "name": "Body Surfing",
+        "grade": "Grade II",
+        "difficulty": "Easy & Fun",
+        "rapid_type": "Playful Drop & Flow",
+        "why_this_name": "This rapid is famous for guided body surfing sessions where participants float through calm currents using life jackets, hence the name 'Body Surfing'.",
+        "description": "Body Surfing rapid has a slightly faster current that allows rafters to safely jump into the water under guide supervision. Participants float downstream while holding safety lines, experiencing the river directly.",
+        "what_to_expect": [
+          "Fun floating experience",
+          "Direct interaction with river water",
+          "Guide-controlled entry and exit"
+        ],
+        "safety_notes": "Life jackets are mandatory. Guides closely monitor all participants during body surfing."
+      }
+    ],
+
+    "itinerary": [
+      {
+        "step": 1,
+        "title": "Arrival at Brahmpuri",
+        "description": "Guests arrive at the Brahmpuri rafting point where registration and equipment allocation takes place."
+      },
+      {
+        "step": 2,
+        "title": "Safety Briefing",
+        "description": "Professional river guides explain paddling techniques, safety commands, and emergency procedures."
+      },
+      {
+        "step": 3,
+        "title": "Rafting Begins",
+        "description": "Rafting starts with calm waters, allowing participants to practice paddling before entering small rapids."
+      },
+      {
+        "step": 4,
+        "title": "Rapids & Body Surfing",
+        "description": "Participants navigate Sweet Sixteen and Body Surfing rapids, with optional body surfing activity."
+      },
+      {
+        "step": 5,
+        "title": "Finish & Departure",
+        "description": "Rafting ends near Rishikesh. Participants change clothes and depart."
+      }
+    ],
+
+    "inclusions": [
+      "ISI / US Coast Guard approved Life Jacket",
+      "Safety Helmet",
+      "High-quality Paddle",
+      "Certified River Guide",
+      "Pre-rafting Safety Briefing"
+    ],
+
+    "exclusions": [
+      "Photos & Videos",
+      "Transportation to rafting point",
+      "Personal insurance",
+      "Meals"
+    ],
+
+    "faqs": [
+      {
+        "q": "Is Brahmpuri rafting safe for beginners?",
+        "a": "Yes, this stretch is the safest rafting option in Rishikesh and is ideal for beginners and families."
+      },
+      {
+        "q": "Do I need to know swimming?",
+        "a": "No, swimming is not required. Life jackets are compulsory and ensure complete safety."
+      },
+      {
+        "q": "Can children do this rafting?",
+        "a": "Yes, children above 12 years can safely participate under guide supervision."
+      },
+      {
+        "q": "What if water level increases?",
+        "a": "Rafting is stopped immediately if river conditions become unsafe."
+      }
+    ],
+
+    "policies": [
+      {
+        "id": 1,
+        "title": "Weather & Safety Policy",
+        "points": [
+          "Rafting may be cancelled if river flow is unsafe.",
+          "Full refund or reschedule provided for weather-related cancellations."
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Cancellation Policy",
+        "points": [
+          "Free cancellation up to 24 hours before activity.",
+          "Same-day cancellations are non-refundable."
+        ]
+      }
+    ],
+
+    "seo": {
+      "meta_title": "Brahmpuri Club Rafting in Rishikesh | Beginner River Rafting",
+      "meta_description": "Enjoy safe and fun Brahmpuri rafting in Rishikesh. Ideal for beginners, families, and kids with Grade I–II rapids."
+    }
+  },
+
+  "shivpuri-rafting": {
+    "id": 102,
+    "slug": "shivpuri-rafting",
+    "name": "Shivpuri Thrill Rafting",
+    "location": "Shivpuri to Rishikesh",
+    "river": "River Ganga",
+    "distance": "16 Kilometres",
+    "grade": "Grade II–III",
+    "duration": "2.5 – 3 Hours",
+    "starting_point": "Shivpuri",
+    "ending_point": "NIM Beach / Rishikesh",
+    "best_season": "September to June",
+    "minimum_age": 14,
+    "fitness_level": "Moderate fitness required",
+
+    "ideal_for": [
+      "First-time thrill seekers",
+      "Young adults",
+      "Groups & friends",
+      "Adventure lovers"
+    ],
+
+    "price": "1,000",
+    "oldPrice": "1,500",
+
+    "tagline": "The most popular rafting stretch in Rishikesh packed with thrilling rapids and long river flow.",
+
+    "overview": "Shivpuri rafting is the most popular and balanced rafting stretch on the River Ganga. It offers a perfect mix of excitement and safety with continuous rapids, stronger currents, and iconic wave trains. This stretch is ideal for beginners who want thrill and for regular rafters looking for fun without extreme difficulty.",
+
+    "media": [
+      {
+        "media_url": "/src/assets/22.jpg",
+        "media_role": "hero_banner"
+      },
+      {
+        "media_url": "/src/assets/23.jpg",
+        "media_role": "gallery"
+      }
+    ],
+
+    "rapids": [
+      {
+        "name": "Jai Ganga Maiya",
+        "grade": "Grade II",
+        "difficulty": "Easy–Moderate",
+        "rapid_type": "Wide Wave Train",
+        "why_this_name": "Named by local river guides as a respectful greeting to the holy River Ganga, marking the beginning of the thrilling rafting stretch.",
+        "description": "This rapid welcomes rafters with wide, rolling waves that create excitement without being aggressive. It helps rafters build rhythm and confidence early in the run.",
+        "what_to_expect": [
+          "Strong splashes",
+          "Smooth wave patterns",
+          "Perfect warm-up rapid"
+        ],
+        "safety_notes": "Safe rapid with controlled water flow. Ideal to prepare for upcoming rapids."
+      },
+      {
+        "name": "Roller Coaster",
+        "grade": "Grade III",
+        "difficulty": "Moderate",
+        "rapid_type": "Continuous Wave Train",
+        "why_this_name": "Named after the roller-coaster-like motion of the raft going up and down through powerful standing waves.",
+        "description": "Roller Coaster is one of the most exciting rapids in Shivpuri rafting. The raft moves through a series of high, continuous waves that lift and drop the raft repeatedly, delivering pure adrenaline.",
+        "what_to_expect": [
+          "High waves",
+          "Strong raft movement",
+          "Heavy splashes"
+        ],
+        "safety_notes": "Guides provide clear commands. Falling out is rare but swimmers are quickly rescued."
+      },
+      {
+        "name": "Golf Course",
+        "grade": "Grade III",
+        "difficulty": "Moderate",
+        "rapid_type": "Technical Rapid",
+        "why_this_name": "The rapid passes alongside a golf course, and the scattered rocks resemble a golf field layout.",
+        "description": "Golf Course rapid requires coordinated paddling as the raft navigates through multiple channels. It tests teamwork and guide skill.",
+        "what_to_expect": [
+          "Directional turns",
+          "Fast-moving current",
+          "Technical paddling"
+        ],
+        "safety_notes": "Requires listening carefully to guide instructions."
+      },
+      {
+        "name": "Club House",
+        "grade": "Grade II+",
+        "difficulty": "Easy–Moderate",
+        "rapid_type": "Exit Rapid",
+        "why_this_name": "Named because it marks the end of the main rapid section, similar to reaching a clubhouse after a game.",
+        "description": "Club House is a fun rapid that signals the end of the intense section. It has playful waves and allows rafters to relax and celebrate.",
+        "what_to_expect": ["Fun splashes", "Relaxed paddling", "Photo moments"],
+        "safety_notes": "Very safe rapid with low risk."
+      }
+    ],
+
+    "itinerary": [
+      {
+        "step": 1,
+        "title": "Arrival at Shivpuri",
+        "description": "Guests report at Shivpuri rafting point for registration and equipment distribution."
+      },
+      {
+        "step": 2,
+        "title": "Safety Briefing",
+        "description": "Detailed safety briefing covering paddling techniques, commands, and rescue methods."
+      },
+      {
+        "step": 3,
+        "title": "Rafting Begins",
+        "description": "Rafting starts with mild rapids, gradually increasing in intensity."
+      },
+      {
+        "step": 4,
+        "title": "Major Rapids Section",
+        "description": "Navigate Jai Ganga Maiya, Roller Coaster, Golf Course, and Club House rapids."
+      },
+      {
+        "step": 5,
+        "title": "Finish & Departure",
+        "description": "Rafting ends near Rishikesh. Participants change clothes and depart."
+      }
+    ],
+
+    "inclusions": [
+      "ISI / US Coast Guard approved Life Jacket",
+      "Safety Helmet",
+      "High-quality Paddle",
+      "Certified River Guide",
+      "Safety Kayaker",
+      "Pre-rafting Safety Briefing"
+    ],
+
+    "exclusions": [
+      "Photos & Videos",
+      "Transportation",
+      "Personal insurance",
+      "Meals"
+    ],
+
+    "faqs": [
+      {
+        "q": "Is Shivpuri rafting suitable for beginners?",
+        "a": "Yes, beginners with basic fitness can safely enjoy this stretch under professional guidance."
+      },
+      {
+        "q": "Is swimming required?",
+        "a": "No, swimming is not required. Life jackets ensure safety."
+      },
+      {
+        "q": "How intense are the rapids?",
+        "a": "Rapids are Grade II–III, offering excitement without extreme danger."
+      }
+    ],
+
+    "policies": [
+      {
+        "id": 1,
+        "title": "Weather & Safety Policy",
+        "points": [
+          "Rafting may be cancelled if river conditions become unsafe.",
+          "Full refund or reschedule for weather-related cancellations."
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Cancellation Policy",
+        "points": [
+          "Free cancellation up to 24 hours before activity.",
+          "Same-day cancellations are non-refundable."
+        ]
+      }
+    ],
+
+    "seo": {
+      "meta_title": "Shivpuri Thrill Rafting in Rishikesh | Grade II–III Rapids",
+      "meta_description": "Experience the most popular Shivpuri rafting in Rishikesh with thrilling Grade II–III rapids like Roller Coaster and Golf Course."
+    }
+  },
+  "marine-drive-rafting": {
+    "id": 103,
+    "slug": "marine-drive-rafting",
+    "name": "Marine Drive Extreme Rafting",
+    "location": "Marine Drive to Shivpuri",
+    "river": "River Ganga",
+    "distance": "26 Kilometres",
+    "grade": "Grade III–IV",
+    "duration": "4 – 4.5 Hours",
+    "starting_point": "Marine Drive",
+    "ending_point": "Shivpuri / NIM Beach",
+    "best_season": "September to June",
+    "minimum_age": 16,
+    "fitness_level": "Good physical fitness required",
+
+    "ideal_for": [
+      "Adventure lovers",
+      "Thrill seekers",
+      "Experienced rafters",
+      "Physically fit participants"
+    ],
+
+    "price": "1,500",
+    "oldPrice": "2,500",
+
+    "tagline": "High-adrenaline rafting with powerful rapids and long continuous river stretches.",
+
+    "overview": "Marine Drive rafting is a long and challenging stretch offering some of the most powerful and technical rapids on the River Ganga. With extended river time, strong currents, and famous Grade III–IV rapids, this stretch is designed for thrill seekers who want sustained excitement rather than short bursts.",
+
+    "media": [
+      {
+        "media_url": "/src/assets/23.jpg",
+        "media_role": "hero_banner"
+      },
+      {
+        "media_url": "/src/assets/21.jpg",
+        "media_role": "gallery"
+      }
+    ],
+
+    "rapids": [
+      {
+        "name": "Three Blind Mice",
+        "grade": "Grade III",
+        "difficulty": "Moderate",
+        "rapid_type": "Triple Drop Rapid",
+        "why_this_name": "The rapid consists of three successive drops that must be navigated carefully, much like moving blindly through obstacles.",
+        "description": "This rapid introduces rafters to fast drops and sudden turns. It requires precise paddling and quick guide commands.",
+        "what_to_expect": [
+          "Sudden drops",
+          "Strong current",
+          "Quick maneuvering"
+        ],
+        "safety_notes": "Guides position the raft carefully to avoid rocks."
+      },
+      {
+        "name": "Crossfire",
+        "grade": "Grade III+",
+        "difficulty": "Moderate–Challenging",
+        "rapid_type": "Converging Currents",
+        "why_this_name": "Named due to two strong currents colliding from opposite directions, creating turbulent water.",
+        "description": "Crossfire tests teamwork as the raft faces powerful cross-currents that can spin it if not handled properly.",
+        "what_to_expect": [
+          "Strong sideways push",
+          "Sudden splashes",
+          "High excitement"
+        ],
+        "safety_notes": "Paddling commands must be followed strictly."
+      },
+      {
+        "name": "The Wall",
+        "grade": "Grade IV",
+        "difficulty": "Challenging",
+        "rapid_type": "Vertical Drop Rapid",
+        "why_this_name": "A massive standing wave forms a wall-like structure that the raft must punch through.",
+        "description": "The Wall is the most famous rapid of Marine Drive rafting. The raft hits a huge wave head-on, often completely submerging the front before emerging dramatically.",
+        "what_to_expect": [
+          "Very large wave",
+          "High chance of complete splash",
+          "Extreme adrenaline"
+        ],
+        "safety_notes": "Strong swimmers and experienced guides are mandatory for this rapid."
+      },
+      {
+        "name": "Scott’s Pride",
+        "grade": "Grade III",
+        "difficulty": "Moderate",
+        "rapid_type": "Wave Train Rapid",
+        "why_this_name": "Named after a legendary rafter who considered this rapid a personal favorite due to its clean wave flow.",
+        "description": "A fast, flowing rapid that allows rafters to regain rhythm after intense sections while still enjoying powerful waves.",
+        "what_to_expect": [
+          "Smooth but fast waves",
+          "Continuous paddling",
+          "Enjoyable rafting flow"
+        ],
+        "safety_notes": "Safe with guided paddling."
+      }
+    ],
+
+    "itinerary": [
+      {
+        "step": 1,
+        "title": "Arrival at Marine Drive",
+        "description": "Participants report at Marine Drive for registration and equipment allocation."
+      },
+      {
+        "step": 2,
+        "title": "Safety Training",
+        "description": "Detailed safety instructions including rescue techniques and paddle commands."
+      },
+      {
+        "step": 3,
+        "title": "Rafting Begins",
+        "description": "Rafting starts with moderate rapids and gradually increases in intensity."
+      },
+      {
+        "step": 4,
+        "title": "Extreme Rapids Section",
+        "description": "Navigate Three Blind Mice, Crossfire, The Wall, and Scott’s Pride."
+      },
+      {
+        "step": 5,
+        "title": "Finish & Exit",
+        "description": "Rafting ends near Shivpuri. Participants change clothes and depart."
+      }
+    ],
+
+    "inclusions": [
+      "US Coast Guard approved Life Jacket",
+      "High-impact Safety Helmet",
+      "Professional Paddle",
+      "Highly Experienced River Guide",
+      "Rescue Kayaker",
+      "Comprehensive Safety Briefing"
+    ],
+
+    "exclusions": [
+      "Photos & Videos",
+      "Transportation",
+      "Meals",
+      "Personal insurance"
+    ],
+
+    "faqs": [
+      {
+        "q": "Is Marine Drive rafting suitable for beginners?",
+        "a": "No, this stretch is recommended for people with prior rafting experience or good physical fitness."
+      },
+      {
+        "q": "Is swimming mandatory?",
+        "a": "Swimming is not mandatory, but confidence in water is recommended."
+      },
+      {
+        "q": "How difficult is The Wall rapid?",
+        "a": "The Wall is a Grade IV rapid and offers a powerful hit with high adrenaline."
+      }
+    ],
+
+    "policies": [
+      {
+        "id": 1,
+        "title": "Safety Policy",
+        "points": [
+          "Participation is subject to guide approval.",
+          "Rafting may be cancelled if river conditions are unsafe."
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Cancellation Policy",
+        "points": [
+          "Free cancellation up to 24 hours before activity.",
+          "No refund for same-day cancellations."
+        ]
+      }
+    ],
+
+    "seo": {
+      "meta_title": "Marine Drive Extreme Rafting in Rishikesh | Grade III–IV Rapids",
+      "meta_description": "Experience Marine Drive rafting in Rishikesh with extreme Grade III–IV rapids like The Wall and Crossfire for true thrill seekers."
+    }
+  },
+  "kaudiyala-rafting": {
+    "id": 104,
+    "slug": "kaudiyala-rafting",
+    "name": "Kaudiyala Challenge Rafting",
+    "location": "Kaudiyala to Rishikesh",
+    "river": "River Ganga",
+    "distance": "35 Kilometres",
+    "grade": "Grade IV+",
+    "duration": "5 – 6 Hours",
+    "starting_point": "Kaudiyala",
+    "ending_point": "Rishikesh / NIM Beach",
+    "best_season": "October to May",
+    "minimum_age": 18,
+    "fitness_level": "Excellent physical fitness required",
+
+    "ideal_for": [
+      "Experienced rafters only",
+      "Adventure professionals",
+      "Extreme thrill seekers",
+      "Physically strong participants"
+    ],
+
+    "price": "2,500",
+    "oldPrice": "3,500",
+
+    "tagline": "The ultimate rafting challenge with continuous Grade IV+ rapids on the mighty Ganga.",
+
+    "overview": "Kaudiyala rafting is the longest and most demanding stretch in Rishikesh, featuring continuous high-grade rapids, strong currents, and technical river features. This stretch is strictly recommended for experienced rafters who are comfortable with turbulent water, aggressive waves, and extended paddling under expert supervision.",
+
+    "media": [
+      {
+        "media_url": "/src/assets/24.jpg",
+        "media_role": "hero_banner"
+      },
+      {
+        "media_url": "/src/assets/23.jpg",
+        "media_role": "gallery"
+      }
+    ],
+
+    "rapids": [
+      {
+        "name": "Daniel’s Dip",
+        "grade": "Grade IV",
+        "difficulty": "Challenging",
+        "rapid_type": "Deep Drop Rapid",
+        "why_this_name": "Named after a rafter who was famously flipped and submerged deep during early explorations of this stretch.",
+        "description": "Daniel’s Dip begins with a steep drop followed by powerful waves that can completely engulf the raft.",
+        "what_to_expect": [
+          "Sudden deep drop",
+          "High water pressure",
+          "Strong recovery currents"
+        ],
+        "safety_notes": "Guides align the raft carefully to avoid lateral flips."
+      },
+      {
+        "name": "The Wall (Kaudiyala Section)",
+        "grade": "Grade IV+",
+        "difficulty": "Very Challenging",
+        "rapid_type": "Vertical Wave Rapid",
+        "why_this_name": "A towering standing wave creates a wall-like structure that must be punched directly.",
+        "description": "Bigger and more aggressive than the Marine Drive Wall, this rapid hits with extreme force and demands perfect timing.",
+        "what_to_expect": [
+          "Massive vertical wave",
+          "High chance of full raft submersion",
+          "Extreme adrenaline surge"
+        ],
+        "safety_notes": "Only expert guides run this rapid under controlled conditions."
+      },
+      {
+        "name": "Five Blind Mice",
+        "grade": "Grade IV",
+        "difficulty": "Challenging",
+        "rapid_type": "Multi-Drop Technical Rapid",
+        "why_this_name": "An extension of Three Blind Mice, featuring five unpredictable drops instead of three.",
+        "description": "This rapid combines continuous drops with cross-currents, testing endurance and coordination.",
+        "what_to_expect": [
+          "Multiple consecutive drops",
+          "No recovery gap",
+          "Sustained paddling"
+        ],
+        "safety_notes": "Team coordination is critical throughout this rapid."
+      },
+      {
+        "name": "Jail House",
+        "grade": "Grade IV+",
+        "difficulty": "Extreme",
+        "rapid_type": "Narrow Channel Rapid",
+        "why_this_name": "The rapid funnels through a narrow rock corridor resembling prison bars.",
+        "description": "Jail House traps water into a confined space, creating violent turbulence and fast exits.",
+        "what_to_expect": [
+          "Narrow passages",
+          "Violent turbulence",
+          "Rapid acceleration"
+        ],
+        "safety_notes": "Strict adherence to guide commands is mandatory."
+      }
+    ],
+
+    "itinerary": [
+      {
+        "step": 1,
+        "title": "Early Morning Reporting",
+        "description": "Participants assemble early due to long distance and duration."
+      },
+      {
+        "step": 2,
+        "title": "Advanced Safety Briefing",
+        "description": "Detailed training covering rescue signals, self-rescue, and emergency protocols."
+      },
+      {
+        "step": 3,
+        "title": "Rafting Begins",
+        "description": "Initial warm-up section followed by increasing rapid intensity."
+      },
+      {
+        "step": 4,
+        "title": "Extreme Rapids Zone",
+        "description": "Navigate Daniel’s Dip, The Wall, Five Blind Mice, and Jail House."
+      },
+      {
+        "step": 5,
+        "title": "Finish & Recovery",
+        "description": "Rafting concludes near Rishikesh with cooldown and departure."
+      }
+    ],
+
+    "inclusions": [
+      "International-grade Life Jacket",
+      "High-impact Helmet",
+      "Professional Paddle",
+      "Highly Experienced River Guide",
+      "Lead & Rescue Kayakers",
+      "Medical Support Team",
+      "Advanced Safety Briefing"
+    ],
+
+    "exclusions": [
+      "Photos & Videos",
+      "Transportation",
+      "Meals",
+      "Personal Insurance"
+    ],
+
+    "faqs": [
+      {
+        "q": "Is Kaudiyala rafting suitable for beginners?",
+        "a": "No. This stretch is strictly for experienced rafters only."
+      },
+      {
+        "q": "Is prior rafting experience mandatory?",
+        "a": "Yes, guides may ask about previous rafting experience before approval."
+      },
+      {
+        "q": "How dangerous is Kaudiyala rafting?",
+        "a": "It is safe under professional supervision but involves extreme water conditions."
+      }
+    ],
+
+    "policies": [
+      {
+        "id": 1,
+        "title": "Strict Safety Policy",
+        "points": [
+          "Guide decision is final for participation approval.",
+          "Rafting may be cancelled if water flow exceeds safety limits."
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Cancellation Policy",
+        "points": [
+          "Cancellations within 48 hours are non-refundable.",
+          "Weather cancellations are fully refundable or reschedulable."
+        ]
+      }
+    ],
+
+    "seo": {
+      "meta_title": "Kaudiyala Challenge Rafting in Rishikesh | Grade IV+ Rapids",
+      "meta_description": "Experience the toughest rafting stretch in Rishikesh at Kaudiyala with continuous Grade IV+ rapids for expert rafters."
+    }
+  }
+}

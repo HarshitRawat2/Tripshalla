@@ -18,7 +18,7 @@ const categories = [
   {
     title: "Rafting",
     icon: Waves,
-    slug: "/packages/rafting",
+    slug: "/raftings",
     desc: "White water rafting in Rishikesh",
   },
   {
