@@ -209,6 +209,7 @@ import PriceCard from "./Packages/PriceCard";
 import raftingDetails from "../json/raftingDetails.json";
 import RapidsSection from "./RapidSection";
 import { supabase } from "../lib/supabase";
+import CorporateCollaborationCard from "./CorporateCollaborationCard";
 
 export default function Tour3() {
   const { slug } = useParams();
@@ -339,6 +340,7 @@ export default function Tour3() {
 
             {/* 🔥 RAPIDS SECTION */}
             <RapidsSection rapids={pkg.rapids} />
+            <CorporateCollaborationCard />
 
             {/* ITINERARY */}
             <section className="bg-white rounded-3xl p-6 md:p-8 shadow-sm">

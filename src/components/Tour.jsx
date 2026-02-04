@@ -17,6 +17,7 @@ import { supabase } from "../lib/supabase";
 import AdventureLoader from "./AdventureLoader";
 import Header from "./Header";
 import { HiOutlineCake, HiOutlineHome, HiOutlineMap } from "react-icons/hi";
+import CorporateCollaborationCard from "./CorporateCollaborationCard";
 // import Header from "./Header";
 
 export default function Tour() {
@@ -512,7 +513,7 @@ export default function Tour() {
               }))}
               details={packageDetails}
             />
-
+            <CorporateCollaborationCard />
             {/* 🔴 STICKY MUST STOP HERE */}
             <section
               id="itinerary-end"

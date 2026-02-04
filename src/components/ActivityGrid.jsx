@@ -67,78 +67,79 @@ import raftingPackage from "../json/raftingPackage.json";
 const raftingUIData = raftingPackage.map((pkg) => ({
   id: pkg.id,
   name: pkg.name,
-  slug: pkg.slug,                 // 🔑 for pricing lookup
-  route: `raftings/${pkg.slug}`,  // 🔑 for navigation
+  slug: pkg.slug, // 🔑 for pricing lookup
+  route: `raftings/${pkg.slug}`, // 🔑 for navigation
   tagline: `${pkg.route}. ${pkg.grade} rapids.`,
   height: `${pkg.distance_km} KM`,
   rating: pkg.rating,
   image: pkg.image,
 }));
 
-
-const BUNGY_PACKAGES = [
-  {
-    id: 1,
-    name: "Splash Bungy",
-    slug: "bungy/splash-bungy",
-    platform: "splash",
-    tagline: "India's highest water-touch jump. Includes free DSLR video.",
-    height: "109 Metres",
-    price: "3,999",
-    oldPrice: "4,999",
-    rating: "4.9",
-    image: "/src/assets/18.jpg",
-  },
-  {
-    id: 2,
-    name: "Rocket Bungy",
-    slug: "bungy/splash-bungy",
-    platform: "thrillfactory",
-    tagline: "Feel the G-force as you are launched into the sky at high speed.",
-    height: "85 Metres",
-    price: "1,999",
-    oldPrice: "2,499",
-    rating: "4.8",
-    image: "/src/assets/19.jpg",
-  },
-  {
-    id: 3,
-    name: "Extreme Combo 6",
-    slug: "bungy/splash-bungy",
-    platform: "thrillfactory",
-    tagline: "Bungy + Zipline + Rocket + Swing + Cycle + Sky Walk.",
-    height: "All-in-One",
-    price: "5,499",
-    oldPrice: "7,999",
-    rating: "5.0",
-    image: "/src/assets/20.jpg",
-  },
-  {
-    id: 4,
-    name: "Extreme Combo 6",
-    slug: "bungy/splash-bungy",
-    platform: "splash",
-    tagline: "Bungy + Zipline + Rocket + Swing + Cycle + Sky Walk.",
-    height: "All-in-One",
-    price: "5,499",
-    oldPrice: "7,999",
-    rating: "5.0",
-    image: "/src/assets/20.jpg",
-  },
-  {
-    id: 5,
-    name: "Extreme Combo 6",
-    platform: "thrillfactory",
-    slug: "bungy/splash-bungy",
-    tagline: "Bungy + Zipline + Rocket + Swing + Cycle + Sky Walk.",
-    height: "All-in-One",
-    price: "5,499",
-    oldPrice: "7,999",
-    rating: "5.0",
-    image: "/src/assets/20.jpg",
-  },
-];
+// const BUNGY_PACKAGES = [
+//   {
+//     id: 1,
+//     name: "Splash Bungy",
+//     slug: "bungy/splash-bungy",
+//     platform: "splash",
+//     tagline: "India's highest water-touch jump. Includes free DSLR video.",
+//     height: "109 Metres",
+//     price: "3,999",
+//     oldPrice: "4,999",
+//     rating: "4.9",
+//     image: "/src/assets/18.jpg",
+//   },
+//   {
+//     id: 2,
+//     name: "Rocket Bungy",
+//     slug: "bungy/splash-bungy",
+//     platform: "thrillfactory",
+//     tagline: "Feel the G-force as you are launched into the sky at high speed.",
+//     height: "85 Metres",
+//     price: "1,999",
+//     oldPrice: "2,499",
+//     rating: "4.8",
+//     image: "/src/assets/19.jpg",
+//   },
+//   {
+//     id: 3,
+//     name: "Extreme Combo 6",
+//     slug: "bungy/splash-bungy",
+//     platform: "thrillfactory",
+//     tagline: "Bungy + Zipline + Rocket + Swing + Cycle + Sky Walk.",
+//     height: "All-in-One",
+//     price: "5,499",
+//     oldPrice: "7,999",
+//     rating: "5.0",
+//     image: "/src/assets/20.jpg",
+//   },
+//   {
+//     id: 4,
+//     name: "Extreme Combo 6",
+//     slug: "bungy/splash-bungy",
+//     platform: "splash",
+//     tagline: "Bungy + Zipline + Rocket + Swing + Cycle + Sky Walk.",
+//     height: "All-in-One",
+//     price: "5,499",
+//     oldPrice: "7,999",
+//     rating: "5.0",
+//     image: "/src/assets/20.jpg",
+//   },
+//   {
+//     id: 5,
+//     name: "Extreme Combo 6",
+//     platform: "thrillfactory",
+//     slug: "bungy/splash-bungy",
+//     tagline: "Bungy + Zipline + Rocket + Swing + Cycle + Sky Walk.",
+//     height: "All-in-One",
+//     price: "5,499",
+//     oldPrice: "7,999",
+//     rating: "5.0",
+//     image: "/src/assets/20.jpg",
+//   },
+// ];
 import { supabase } from "../lib/supabase";
+import splashActivityGrid from "../json/splashActivityGrid.json";
+import CorporateCollaborationCard from "./CorporateCollaborationCard";
 
 export default function ActivityGrid() {
   const [visibleCount, setVisibleCount] = useState(3);
@@ -199,7 +200,23 @@ export default function ActivityGrid() {
   }, []);
 
   // const currentPackages = isRafting ? raftingUIData : BUNGY_PACKAGES;
-const basePackages = isRafting
+  const splashUIData = splashActivityGrid.map((pkg) => ({
+    ...pkg,
+    height: pkg.display_metric, // 🔑 UI expects `height`
+  }));
+
+  // const basePackages = isRafting
+  //     ? raftingUIData.map((pkg) => {
+  //         const pricing = pricingMap[pkg.slug];
+  //         return {
+  //           ...pkg,
+  //           price: pricing?.final_price,
+  //           oldPrice: pricing?.price,
+  //         };
+  //       })
+  //     : BUNGY_PACKAGES;
+
+  const basePackages = isRafting
     ? raftingUIData.map((pkg) => {
         const pricing = pricingMap[pkg.slug];
         return {
@@ -208,14 +225,13 @@ const basePackages = isRafting
           oldPrice: pricing?.price,
         };
       })
-    : BUNGY_PACKAGES;
+    : splashUIData;
 
-
-    const currentPackages = isRafting 
-    ? basePackages 
-    : activePlatform === "all" 
-      ? basePackages 
-      : basePackages.filter(pkg => pkg.platform === activePlatform);
+  const currentPackages = isRafting
+    ? basePackages
+    : activePlatform === "all"
+      ? basePackages
+      : basePackages.filter((pkg) => pkg.platform === activePlatform);
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-16 bg-white">
@@ -266,7 +282,6 @@ const basePackages = isRafting
             key={pkg.id}
             // onClick={() => navigate(`/${pkg.slug}`)}
             onClick={() => navigate(`/${pkg.route}`)}
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -288,6 +303,11 @@ const basePackages = isRafting
                   {/* <Zap size={10} fill="currentColor" /> {pkg.height} */}
                   <Zap size={10} fill="currentColor" /> {pkg.height}
                 </div>
+                {pkg.type === "combo" && (
+                  <div className="bg-amber-400 text-black text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest">
+                    Combo
+                  </div>
+                )}
                 <span className="flex items-center gap-1 text-xs bg-white/20 backdrop-blur-md px-2 py-1 rounded-full font-bold">
                   <Star size={14} className="text-yellow-400 fill-yellow-400" />{" "}
                   {pkg.rating}
@@ -344,6 +364,8 @@ const basePackages = isRafting
           </motion.div>
         ))}
       </div>
+      {/* ✅ SHOW FOR ALL (bungy + rafting + combos) */}
+      <CorporateCollaborationCard />
 
       {/* FOOTER BUTTONS (Show More / Show Less) */}
       <div className="mt-16 flex flex-col items-center gap-4">
@@ -376,5 +398,6 @@ const basePackages = isRafting
         packageId={selectedPackageId}
       />
     </section>
+    // <CorporateCollaborationCard />
   );
 }

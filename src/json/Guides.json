@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "title": "Explore Rishikesh Like a Local",
+    "subtitle": "Best places to visit, scenic routes & scooty rentals",
+    "description": "Rishikesh is more than just rafting and temples. Discover hidden waterfalls, peaceful ghats, scenic mountain roads and cafes — best explored on a scooty or bike."
+  },
+
+  "whyScooty": {
+    "title": "Why Explore Rishikesh on a Scooty?",
+    "points": [
+      "Easy access to narrow hill roads",
+      "Freedom to stop anywhere for photos",
+      "Cheapest & fastest local transport",
+      "Perfect for couples & solo travelers",
+      "Easy parking near ghats & cafes"
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "spiritual",
+      "title": "Spiritual & Cultural Places",
+      "places": [
+        {
+          "name": "Triveni Ghat",
+          "description": "The most famous ghat in Rishikesh. Visit during evening Ganga Aarti for a peaceful spiritual experience.",
+          "best_time": "Evening (6:00 – 7:00 PM)",
+          "distance": "Central Rishikesh",
+          "tips": "Reach early to get a good viewing spot."
+        },
+        {
+          "name": "Parmarth Niketan",
+          "description": "A renowned ashram on the banks of River Ganga known for yoga, meditation and Ganga Aarti.",
+          "best_time": "Morning or Evening",
+          "distance": "Ram Jhula Area",
+          "tips": "Wear modest clothes."
+        },
+        {
+          "name": "Beatles Ashram",
+          "description": "A peaceful heritage site famous for meditation domes and wall art.",
+          "best_time": "Morning",
+          "distance": "Near Ram Jhula",
+          "tips": "Carry water; entry ticket required."
+        },
+        {
+          "name": "Neelkanth Mahadev Temple",
+          "description": "A sacred Shiva temple surrounded by dense forest and scenic mountain roads.",
+          "best_time": "Early Morning",
+          "distance": "32 km from Rishikesh",
+          "tips": "Scooty ride is scenic but drive carefully."
+        }
+      ]
+    },
+
+    {
+      "id": "nature",
+      "title": "Nature & Scenic Spots",
+      "places": [
+        {
+          "name": "Neer Garh Waterfall",
+          "description": "One of the most beautiful waterfalls near Rishikesh with a short trek.",
+          "best_time": "Morning",
+          "distance": "6 km",
+          "tips": "Wear good footwear."
+        },
+        {
+          "name": "Patna Waterfall",
+          "description": "A calm and less crowded waterfall ideal for nature lovers.",
+          "best_time": "Morning",
+          "distance": "7 km",
+          "tips": "Avoid during heavy rains."
+        },
+        {
+          "name": "Shivpuri",
+          "description": "Adventure hub known for rafting camps and riverside cafes.",
+          "best_time": "Anytime",
+          "distance": "16 km",
+          "tips": "Great sunset views."
+        }
+      ]
+    },
+
+    {
+      "id": "cafes",
+      "title": "Cafes & Chill Spots",
+      "places": [
+        {
+          "name": "Ganga View Cafes",
+          "description": "Relaxing cafes with river views, perfect for breakfast or sunset.",
+          "best_time": "Morning or Evening",
+          "distance": "Lakshman Jhula Area",
+          "tips": "Scooty parking available nearby."
+        }
+      ]
+    }
+  ],
+
+  "bikeRental": {
+    "title": "Scooty & Bike Rentals in Rishikesh",
+    "description": "We provide well-maintained scooties and bikes so you can explore Rishikesh comfortably with local route guidance.",
+    "features": [
+      "Hourly & daily rentals",
+      "Helmets included",
+      "Local sightseeing guidance",
+      "Best routes & timing tips"
+    ],
+    "cta": {
+      "call": "+91XXXXXXXXXX",
+      "whatsappText": "Hi, I want to rent a scooty in Rishikesh and need local sightseeing guidance."
+    }
+  },
+
+  "localTips": [
+    "Start sightseeing early in the morning",
+    "Avoid riding near Jhulas during peak hours",
+    "Carry cash for parking & small shops",
+    "Wear modest clothes near temples",
+    "Always follow traffic & helmet rules"
+  ]
+}

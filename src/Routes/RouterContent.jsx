@@ -23,6 +23,7 @@ import { HiGlobeAlt } from "react-icons/hi2";
 import ActivityGrid from "../components/ActivityGrid";
 import Tour2 from "../components/Tour2";
 import Tour3 from "../components/Tour3";
+import Guides from "../Pages/Guides";
 
 // import Home from "./Pages/Home";
 // import Tour from "./components/Tour";
@@ -154,6 +155,8 @@ export default function RouterContent() {
         <Route path="/bungy/:slug" element={<Tour2 />} />
         <Route path="/raftings" element={<ActivityGrid />} />
         <Route path="/raftings/:slug" element={<Tour3 />} />
+        <Route path="/guide" element={<Guides />} />
+
         {/* <Route path="/trek/:id" element={<TrekDetails />} /> */}
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/gallery" element={<Gallery />} />
