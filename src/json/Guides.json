@@ -33,7 +33,7 @@
           "distance": "Central Rishikesh",
           "tips": "Reach at least 30 minutes early for a good spot during Aarti.",
           "image": "/src/assets/places/triveni-ghat.jpg",
-          "map_link": "https://goo.gl/maps/JQTriveniGhat"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=triveni+ghat&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Parmarth Niketan Ashram",
@@ -42,7 +42,7 @@
           "distance": "Ram Jhula Area",
           "tips": "Wear modest clothes and maintain silence inside the ashram.",
           "image": "/src/assets/places/parmarth-niketan.jpg",
-          "map_link": "https://goo.gl/maps/ParmarthNiketan"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=parmarth+niketan+ashram&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Beatles Ashram (Chaurasi Kutia)",
@@ -51,7 +51,7 @@
           "distance": "Near Ram Jhula",
           "tips": "Carry water and wear comfortable shoes; entry ticket required.",
           "image": "/src/assets/places/beatles-ashram.jpg",
-          "map_link": "https://goo.gl/maps/BeatlesAshram"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=beatles+ashram&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Lakshman Jhula",
@@ -60,7 +60,7 @@
           "distance": "Lakshman Jhula Area",
           "tips": "Avoid peak afternoon hours due to heavy crowd.",
           "image": "/src/assets/places/lakshman-jhula.jpg",
-          "map_link": "https://goo.gl/maps/LakshmanJhula"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=lakshman+jhula&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Ram Jhula",
@@ -69,7 +69,7 @@
           "distance": "Near Parmarth Niketan",
           "tips": "Best explored early morning for calm vibes.",
           "image": "/src/assets/places/ram-jhula.jpg",
-          "map_link": "https://goo.gl/maps/RamJhula"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=ram+jhula&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Neelkanth Mahadev Temple",
@@ -78,7 +78,7 @@
           "distance": "32 km from Rishikesh",
           "tips": "Road is scenic but narrow; ride carefully on scooty.",
           "image": "/src/assets/places/neelkanth-mahadev.jpg",
-          "map_link": "https://goo.gl/maps/NeelkanthMahadev"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=neelkanth+mahadev+temple&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Janki Setu",
@@ -87,7 +87,7 @@
           "distance": "Tapovan Area",
           "tips": "Great alternative to Lakshman Jhula for peaceful walks.",
           "image": "/src/assets/places/janki-setu.jpg",
-          "map_link": "https://goo.gl/maps/JankiSetu"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=janki+setu+rishikesh&cp=30.136023%7E78.172970&lvl=10.7&style=r"
         },
         {
           "name": "Bajrang Setu",
@@ -96,7 +96,7 @@
           "distance": "Near Tapovan",
           "tips": "Best experienced during sunset for photos.",
           "image": "/src/assets/places/bajrang-setu.jpg",
-          "map_link": "https://goo.gl/maps/BajrangSetu"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=bajrang+setu+rishikesh&cp=30.136023%7E78.172970&lvl=10.7&style=r"
         }
       ]
     },
@@ -112,7 +112,7 @@
           "distance": "6 km from Lakshman Jhula",
           "tips": "Wear good trekking shoes and avoid weekends for less crowd.",
           "image": "/src/assets/places/neer-garh-waterfall.jpg",
-          "map_link": "https://goo.gl/maps/NeerGarhWaterfall"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=neer+garh+waterfall&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Kyarki View Point",
@@ -121,7 +121,7 @@
           "distance": "14 km from Tapovan",
           "tips": "Road is narrow but scenic; ideal for scooty rides. Carry water and avoid riding after dark.",
           "image": "/src/assets/places/kyarki-view-point.jpg",
-          "map_link": "https://goo.gl/maps/KyarkiViewPoint"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=kyarki+view+point&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Patna Waterfall",
@@ -130,7 +130,7 @@
           "distance": "7 km from Lakshman Jhula",
           "tips": "Avoid visiting during heavy rainfall season.",
           "image": "/src/assets/places/patna-waterfall.jpg",
-          "map_link": "https://goo.gl/maps/PatnaWaterfall"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=patna+waterfall&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Phool Chatti Waterfall",
@@ -139,7 +139,7 @@
           "distance": "5 km from Ram Jhula",
           "tips": "Best visited early; limited food stalls nearby.",
           "image": "/src/assets/places/phool-chatti-waterfall.jpg",
-          "map_link": "https://goo.gl/maps/PhoolChattiWaterfall"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=phool+chatti+waterfall&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Shivpuri",
@@ -148,7 +148,7 @@
           "distance": "16 km from Rishikesh",
           "tips": "Great stop while riding towards Devprayag road.",
           "image": "/src/assets/places/shivpuri.jpg",
-          "map_link": "https://goo.gl/maps/ShivpuriRishikesh"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=shivpuri+rishikesh&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Marine Drive Viewpoint",
@@ -157,7 +157,7 @@
           "distance": "24 km from Rishikesh",
           "tips": "Carry water; limited shops on the route.",
           "image": "/src/assets/places/marine-drive.jpg",
-          "map_link": "https://goo.gl/maps/MarineDriveRishikesh"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=marine+drive+rishikesh&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Kaudiyala",
@@ -166,7 +166,7 @@
           "distance": "36 km from Rishikesh",
           "tips": "Best for experienced riders; roads are curvy.",
           "image": "/src/assets/places/kaudiyala.jpg",
-          "map_link": "https://goo.gl/maps/Kaudiyala"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=kaudiyala&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
           "name": "Ganga Beach (Secret Beaches)",
@@ -175,7 +175,7 @@
           "distance": "Various spots around Tapovan & Shivpuri",
           "tips": "Avoid swimming; currents can be strong.",
           "image": "/src/assets/places/ganga-beach.jpg",
-          "map_link": "https://goo.gl/maps/GangaBeachRishikesh"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=ganga+beach+rishikesh&cp=30.103121%7E78.299606&lvl=16&style=r"
         }
       ]
     },
@@ -191,7 +191,7 @@
           "distance": "Lakshman Jhula area",
           "tips": "Visit early morning for quiet ambience; evenings get crowded.",
           "image": "/src/assets/places/ganga-view-cafe.jpg",
-          "map_link": "https://goo.gl/maps/GangaViewCafe"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=ganga+view+cafe+lakshman+jhula&cp=30.136023%7E78.172970&lvl=10.7&style=r"
         },
         {
           "name": "Beatles Café (Little Buddha Café)",
@@ -200,7 +200,7 @@
           "distance": "Tapovan",
           "tips": "Best tables are riverside—wait if needed.",
           "image": "/src/assets/places/beatles-cafe.jpg",
-          "map_link": "https://goo.gl/maps/BeatlesCafeRishikesh"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=beatles+cafe+rishikesh&cp=30.136023%7E78.172970&lvl=10.7&style=r"
         },
         {
           "name": "Freedom Café",
@@ -209,7 +209,7 @@
           "distance": "Near Lakshman Jhula",
           "tips": "Try their herbal teas and breakfast bowls.",
           "image": "/src/assets/places/freedom-cafe.jpg",
-          "map_link": "https://goo.gl/maps/FreedomCafeRishikesh"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=freedom+cafe+rishikesh&cp=30.136023%7E78.172970&lvl=10.7&style=r"
         },
         {
           "name": "Shambala Café",
@@ -218,7 +218,7 @@
           "distance": "Tapovan riverside",
           "tips": "Scooty parking nearby; walk last few meters.",
           "image": "/src/assets/places/shambala-cafe.jpg",
-          "map_link": "https://goo.gl/maps/ShambalaCafe"
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=shambala+cafe+rishikesh&cp=30.136023%7E78.172970&lvl=10.7&style=r"
         },
         {
           "name": "Sunset Point Cafes (Tapovan)",
@@ -226,8 +226,8 @@
           "best_time": "Sunset",
           "distance": "Tapovan",
           "tips": "Reach 30 minutes before sunset for best seats.",
-          "image": "/src/assets/1.jpg",
-          "map_link": "https://goo.gl/maps/TapovanSunsetCafe"
+          "image": "/src/assets/places/sunset-point-cafes.jpg",
+          "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=sunset+point+cafes+tapovan&cp=30.136023%7E78.172970&lvl=10.7&style=r"
         }
       ]
     }

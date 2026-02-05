@@ -12,7 +12,7 @@ const categories = [
   {
     title: "Campings",
     icon: Tent,
-    slug: "/packages/campings",
+    slug: "/packages/camp",
     desc: "Riverside & alpine camps",
   },
   {

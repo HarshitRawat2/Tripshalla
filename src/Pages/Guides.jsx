@@ -147,31 +147,47 @@ export default function RishikeshGuide() {
           <section
             key={cat.id}
             ref={(el) => (sectionRefs.current[cat.id] = el)}
-            className="max-w-7xl mx-auto px-6 py-14 last:pb-24"
+            className="max-w-7xl mx-auto px-6 py-16 last:pb-24"
           >
-            <h3 className="text-3xl md:text-4xl font-black mb-6 flex items-center gap-3">
-              {Icon && <Icon />}
-              {cat.title}
-            </h3>
-            <p className="text-slate-600 max-w-2xl mb-8">
-              {cat.id === "spiritual" &&
-                "Ancient temples, ghats & peaceful spiritual landmarks of Rishikesh."}
-              {cat.id === "nature" &&
-                "Waterfalls, scenic viewpoints & peaceful nature escapes best reached by scooty."}
-              {cat.id === "cafes" &&
-                "Relaxing cafés with river views, great coffee & calm vibes."}
-            </p>
+            {/* HEADING */}
+            <div className="mb-10">
+              <h3 className="text-3xl md:text-4xl font-black flex items-center gap-3">
+                {Icon && <Icon className="text-emerald-600" />}
+                {cat.title}
+              </h3>
 
+              <p className="mt-3 text-slate-600 max-w-2xl">
+                {cat.id === "spiritual" &&
+                  "Ancient temples, ghats & peaceful spiritual landmarks of Rishikesh."}
+                {cat.id === "nature" &&
+                  "Waterfalls, scenic viewpoints & peaceful nature escapes best reached by scooty."}
+                {cat.id === "cafes" &&
+                  "Relaxing cafés with river views, great coffee & calm vibes."}
+              </p>
+            </div>
+
+            {/* CARDS */}
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {placesToShow.map((place, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-[2rem] p-6 shadow-md hover:shadow-xl transition"
+                  className="group relative bg-white rounded-[2rem] p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
                 >
-                  <div className="flex justify-between gap-4">
-                    <div>
-                      <h4 className="text-xl font-black">{place.name}</h4>
-                      <p className="mt-3 text-sm text-slate-600">
+                  {/* BADGE */}
+                  {/* {(cat.id === "nature" || place.scooty_friendly) && (
+                    <span className="absolute top-4 right-4 bg-emerald-50 text-emerald-700 text-[11px] font-bold px-3 py-1 rounded-full">
+                      🛵 Scooty Friendly
+                    </span>
+                  )} */}
+
+                  {/* TOP */}
+                  <div className="flex gap-4">
+                    <div className="flex-1">
+                      <h4 className="text-lg font-black text-slate-900 leading-snug">
+                        {place.name}
+                      </h4>
+
+                      <p className="mt-3 text-sm text-slate-600 leading-relaxed line-clamp-4">
                         {place.description}
                       </p>
                     </div>
@@ -179,32 +195,51 @@ export default function RishikeshGuide() {
                     <img
                       src={place.image}
                       alt={place.name}
-                      className="w-24 h-24 rounded-xl object-cover cursor-pointer hover:scale-105 transition"
+                      className="w-24 h-24 rounded-xl object-cover cursor-pointer shrink-0 transition-transform duration-300 group-hover:scale-105"
                       onClick={() => setActiveImage(place.image)}
                     />
                   </div>
 
-                  <div className="mt-4 flex gap-3 text-xs font-semibold">
+                  {/* META */}
+                  <div className="mt-5 flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
                     <span className="flex items-center gap-1 bg-slate-100 px-3 py-1.5 rounded-full">
                       <Clock size={13} /> {place.best_time}
                     </span>
+
                     <span className="flex items-center gap-1 bg-slate-100 px-3 py-1.5 rounded-full">
                       <MapPin size={13} /> {place.distance}
                     </span>
                   </div>
 
+                  {/* TIP */}
                   {place.tips && (
-                    <div className="mt-4 bg-amber-50 border-l-4 border-amber-400 px-4 py-2 text-sm font-semibold">
+                    <div className="mt-4 bg-amber-50 border-l-4 border-amber-400 px-4 py-2 text-sm font-medium text-amber-900 rounded-r-lg">
                       {place.tips}
                     </div>
                   )}
+
+                  {/* FOOTER (push to bottom) */}
+                  <div className="mt-auto pt-5 flex items-center justify-between">
+                    <span className="text-xs text-slate-400 font-medium">
+                      Best explored by scooty
+                    </span>
+
+                    <a
+                      href={place.map_link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm font-black text-emerald-700 hover:text-emerald-900 transition"
+                    >
+                      Open in Maps →
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
 
-            {/* VIEW MORE BUTTON */}
+            {/* VIEW MORE */}
             {cat.places.length > 3 && (
-              <div className="mt-12 text-center">
+              <div className="mt-14 text-center">
                 <button
                   onClick={() => {
                     setExpanded((prev) => ({
@@ -217,7 +252,7 @@ export default function RishikeshGuide() {
                         behavior: "smooth",
                         block: "start",
                       });
-                    }, 100);
+                    }, 120);
                   }}
                   className="px-10 py-3 rounded-full border-2 border-emerald-600 text-emerald-700 font-black hover:bg-emerald-600 hover:text-white transition"
                 >
@@ -228,6 +263,7 @@ export default function RishikeshGuide() {
           </section>
         );
       })}
+
       {/* LOCAL TIPS */}
       <section className="bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 py-20">
