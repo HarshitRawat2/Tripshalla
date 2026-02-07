@@ -26,7 +26,7 @@ import Tour3 from "../components/Tour3";
 import Guides from "../Pages/Guides";
 import ComingSoonHotels from "../components/ComingSoonHotels";
 import CreateInvoice from "../Pages/Admin/CreateInvoice";
-import Dashboard from "../Pages/Admin/Dashboard";
+// import Dashboard from "../Pages/Admin/Dashboard";
 
 // import Home from "./Pages/Home";
 // import Tour from "./components/Tour";
@@ -149,8 +149,8 @@ export default function RouterContent() {
 
       {/* ===== ROUTES ===== */}
       <Routes>
+        {/* <Route path="/admin/dashboard" element={<Dashboard />} /> */}
         <Route path="/admin/createInvoice" element={<CreateInvoice />} />
-        <Route path="/admin/dashboard" element={<Dashboard />} />
 
         <Route path="/" element={<Home />} />
         <Route path="/tour" element={<Tour />} />
