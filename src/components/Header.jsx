@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
-
+import logosrc from '../assets/MOUNTAINS.png'
 export default function Header({
   links,
   variant = "default",
@@ -103,7 +103,7 @@ export default function Header({
             <div className="bg-white rounded-b-[70%] flex items-center justify-center w-36 md:w-44 h-20 md:h-24  border-t-0">
               <NavLink to="/">
                 <img
-                  src="/src/assets/Logo.png"
+                  src= {logosrc}
                   alt="Travlla Logo"
                   className="h-14 md:h-18 w-auto object-contain"
                 />

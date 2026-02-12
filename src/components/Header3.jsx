@@ -1,6 +1,7 @@
-import React, { useState } from "react"; // Added useState for local menu toggle
+import React, { useState } from "react"; 
 import { NavLink } from "react-router-dom";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import logosrc from '../assets/TRIPSHALA.png'
 
 const Header3 = ({ isDropdownOpen, setIsDropdownOpen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,34 +19,36 @@ const Header3 = ({ isDropdownOpen, setIsDropdownOpen }) => {
 
   const navLinks = [
     { label: "HOME", to: "/" },
+    { label: "GALLERY", to: "/gallery" },
     { label: "ABOUT", to: "/aboutus" },
     { label: "CONTACT", to: "/contact" },
   ];
 
   return (
-    <nav className="w-full bg-white border-b border-slate-100 px-6 py-4 sticky top-0 z-[50] shadow-sm">
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
-        {/* Left Side: Logo */}
+    <nav className="w-full bg-white border-b border-slate-100 px-6 py-2 sticky top-0 z-[100] shadow-sm">
+      <div className="flex items-center justify-between max-w-7xl mx-auto h-16">
+        
+        {/* Left Side: Logo and Name */}
         <div className="flex items-center flex-shrink-0">
-          <NavLink to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-emerald-700 rounded-full flex items-center justify-center">
-              <span className="text-white text-[10px] font-bold">LOGO</span>
-            </div>
-            <span className="text-2xl font-bold text-orange-500 tracking-tight italic">
+          <NavLink to="/" className="flex items-center gap-3 group">
+            <img 
+              src={logosrc} 
+              alt="Tripshalla Logo" 
+              className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105" 
+            />
+            <span className="text-2xl font-black text-[#F7A325] tracking-tighter uppercase italic">
               Tripshalla
             </span>
           </NavLink>
         </div>
 
         {/* Center: Desktop Navigation Links */}
-        <ul className="hidden md:flex items-center mx-auto space-x-8 text-slate-700 font-medium text-sm uppercase tracking-wide">
+        <ul className="hidden md:flex items-center mx-auto space-x-8 text-[#1A1D1F] font-bold text-[13px] uppercase tracking-wider">
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive
-                  ? "text-emerald-700"
-                  : "hover:text-emerald-600 transition-colors"
+                isActive ? "text-[#F7A325]" : "hover:text-[#F7A325] transition-colors"
               }
             >
               Home
@@ -59,12 +62,12 @@ const Header3 = ({ isDropdownOpen, setIsDropdownOpen }) => {
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
             <span
-              className={`${isDropdownOpen ? "text-emerald-700" : "hover:text-emerald-600"}`}
+              className={`transition-colors ${isDropdownOpen ? "text-[#F7A325]" : "hover:text-[#F7A325]"}`}
             >
               {item.label}
             </span>
             <FiChevronDown
-              className={`transition-transform duration-200 ${isDropdownOpen ? "rotate-180 text-emerald-700" : ""}`}
+              className={`transition-transform duration-200 ${isDropdownOpen ? "rotate-180 text-[#F7A325]" : ""}`}
             />
 
             {isDropdownOpen && (
@@ -75,10 +78,10 @@ const Header3 = ({ isDropdownOpen, setIsDropdownOpen }) => {
                       key={index}
                       to={sub.to}
                       className={({ isActive }) =>
-                        `block px-6 py-3 text-[13px] capitalize transition-colors ${
+                        `block px-6 py-3 text-[12px] font-bold transition-colors uppercase ${
                           isActive
-                            ? "bg-emerald-50 text-emerald-700 font-bold"
-                            : "text-slate-600 hover:bg-slate-50 hover:text-emerald-600"
+                            ? "bg-orange-50 text-[#F7A325]"
+                            : "text-slate-600 hover:bg-slate-50 hover:text-[#F7A325]"
                         }`
                       }
                     >
@@ -90,48 +93,26 @@ const Header3 = ({ isDropdownOpen, setIsDropdownOpen }) => {
             )}
           </li>
 
-             <li>
-            <NavLink
-              to="/gallery"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-emerald-700"
-                  : "hover:text-emerald-600 transition-colors"
-              }
-            >
-              Gallery
-            </NavLink>
-          </li>
-
-     <li>
-            <NavLink
-              to="/aboutus"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-emerald-700"
-                  : "hover:text-emerald-600 transition-colors"
-              }
-            >
-              About
-            </NavLink>
-          </li>
-
-
-          <li>
-            <NavLink
-              to="/contact"
-              className="hover:text-emerald-600 transition-colors"
-            >
-              Contact
-            </NavLink>
-          </li>
+          {/* Map through other static links */}
+          {navLinks.slice(1).map((link) => (
+            <li key={link.to}>
+              <NavLink
+                to={link.to}
+                className={({ isActive }) =>
+                  isActive ? "text-[#F7A325]" : "hover:text-[#F7A325] transition-colors"
+                }
+              >
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
 
         {/* Right Side: Hamburger Toggle (Mobile Only) */}
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-slate-700 text-2xl p-2 focus:outline-none"
+            className="text-[#1A1D1F] text-2xl p-2 focus:outline-none"
           >
             {isMenuOpen ? <FiX /> : <FiMenu />}
           </button>
@@ -140,7 +121,7 @@ const Header3 = ({ isDropdownOpen, setIsDropdownOpen }) => {
 
       {/* Mobile Sidebar Overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 transition-opacity duration-300 md:hidden ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+        className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
         onClick={() => setIsMenuOpen(false)}
       />
 
@@ -150,25 +131,25 @@ const Header3 = ({ isDropdownOpen, setIsDropdownOpen }) => {
       >
         <div className="p-6">
           <div className="flex justify-between items-center mb-8">
-            <span className="text-xl font-bold text-orange-500 italic">
+            <span className="text-xl font-black text-[#F7A325] uppercase italic">
               Tripshalla
             </span>
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="text-2xl text-slate-700"
+              className="text-2xl text-[#1A1D1F]"
             >
               <FiX />
             </button>
           </div>
 
-          <ul className="flex flex-col space-y-6 text-slate-700 font-semibold uppercase tracking-wider text-sm">
+          <ul className="flex flex-col space-y-6 text-[#1A1D1F] font-bold uppercase tracking-wider text-sm">
             {navLinks.map((link) => (
               <li key={link.to}>
                 <NavLink
                   to={link.to}
                   onClick={() => setIsMenuOpen(false)}
                   className={({ isActive }) =>
-                    isActive ? "text-emerald-700" : "hover:text-emerald-600"
+                    isActive ? "text-[#F7A325]" : "hover:text-[#F7A325]"
                   }
                 >
                   {link.label}
@@ -176,16 +157,16 @@ const Header3 = ({ isDropdownOpen, setIsDropdownOpen }) => {
               </li>
             ))}
 
-            {/* Mobile Packages Section (Simplified) */}
+            {/* Mobile Packages Section */}
             <li className="pt-4 border-t border-slate-100">
-              <p className="text-xs text-slate-400 mb-4">OUR PACKAGES</p>
+              <p className="text-[10px] text-slate-400 mb-4 tracking-[0.2em]">OUR PACKAGES</p>
               <div className="flex flex-col space-y-4 pl-2">
                 {item.subLinks.map((sub) => (
                   <NavLink
                     key={sub.to}
                     to={sub.to}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-emerald-800 hover:text-emerald-600 capitalize"
+                    className="text-[#00796B] hover:text-[#F7A325] capitalize"
                   >
                     {sub.label}
                   </NavLink>

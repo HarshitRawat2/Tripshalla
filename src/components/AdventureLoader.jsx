@@ -6,64 +6,65 @@ const AdventureLoader = () => {
     <div className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-white">
       <div className="relative flex items-center justify-center">
         
-        {/* Outer Pulsing Circle (Compass Ring) */}
+        {/* Outer Rotating Sun Ring (Broken line for modern feel) */}
         <motion.div
-          className="absolute h-32 w-32 rounded-full border-2 border-emerald-100"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.2, 0.5] }}
+          className="absolute h-36 w-36 rounded-full border-4 border-dashed border-[#F7A325]/20"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+        />
+
+        {/* Inner Solid Pulsing Sun Ring */}
+        <motion.div
+          className="absolute h-28 w-28 rounded-full border-2 border-[#F7A325]"
+          animate={{ scale: [1, 1.1, 1], opacity: [1, 0.5, 1] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* The Spinning Compass Needle */}
-        <motion.div
-          className="absolute h-24 w-24 rounded-full border-t-4 border-amber-400"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-        />
-
-        {/* Central Icon: Mountain Peaks */}
+        {/* Central Logo Symbol: The Mountains */}
         <div className="relative flex flex-col items-center">
-          <svg
-            className="h-12 w-12 text-emerald-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+          <motion.div
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 21h18M3 21l8-14 8 14M13 13l3 3m-3-3l-3 3m3-3V7"
-            />
-          </svg>
+            <svg
+              className="h-16 w-16 text-[#00796B]"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Modern Triple Peak Mountain Path */}
+              <path d="M4 21L10 7L13 13L16 9L21 21H4Z" />
+              {/* Sun/Point element */}
+              <circle cx="17" cy="6" r="2.5" className="text-[#F7A325]" />
+            </svg>
+          </motion.div>
         </div>
       </div>
 
-      {/* Loading Text */}
+      {/* Brand Text Content */}
       <motion.div 
-        className="mt-8 flex flex-col items-center gap-2"
+        className="mt-12 flex flex-col items-center gap-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.3 }}
       >
-        <h2 className="text-xl font-bold tracking-widest text-slate-800 uppercase italic">
+        <h2 className="text-3xl font-black tracking-tighter text-[#1A1D1F] uppercase italic">
           Tripshalla
         </h2>
-        <div className="flex gap-1">
-          {[0, 1, 2].map((i) => (
-            <motion.div
-              key={i}
-              className="h-1.5 w-1.5 rounded-full bg-emerald-600"
-              animate={{ y: [0, -5, 0] }}
-              transition={{
-                duration: 0.6,
-                repeat: Infinity,
-                delay: i * 0.1,
-              }}
-            />
-          ))}
+        
+        {/* Progress Bar Style Loader */}
+        <div className="relative h-1 w-32 bg-slate-100 rounded-full overflow-hidden">
+          <motion.div
+            className="absolute top-0 left-0 h-full bg-[#F7A325]"
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          />
         </div>
-        <p className="text-xs font-medium text-slate-400 uppercase tracking-tighter mt-2">
-          Preparing your journey...
+
+        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mt-2">
+          Mapping your adventure
         </p>
       </motion.div>
     </div>
