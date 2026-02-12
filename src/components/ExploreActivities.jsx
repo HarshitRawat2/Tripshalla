@@ -6,27 +6,36 @@ const activities = [
     title: "Treks",
     desc: "Guided Himalayan treks for beginners & pros",
     icon: Mountain,
+    // Icon Background: Adventure Green
+    color: "bg-[#00796B]",
   },
   {
     title: "Camps",
     desc: "Mountain & riverside camping experiences",
     icon: Tent,
+    // Icon Background: Mountain Orange
+    color: "bg-[#F7A325]",
   },
   {
     title: "Rafting",
     desc: "White-water rafting in Rishikesh",
     icon: Waves,
+    // Icon Background: Adventure Green
+    color: "bg-[#00796B]",
   },
   {
     title: "Adventure",
     desc: "Bungee, Zipline, Cliff Jumping & more",
     icon: Zap,
+    // Icon Background: Compass Charcoal
+    color: "bg-[#1A1D1F]",
   },
 ];
 
 export default function ExploreActivities() {
   return (
-    <section className="py-20 bg-[#FAFAFA]">
+    // Background changed to white for clean contrast
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <motion.div
@@ -35,7 +44,8 @@ export default function ExploreActivities() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-4xl font-extrabold text-teal-900">
+          {/* Main title text: Deep Charcoal */}
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1D1F]">
             What We Specialize In
           </h2>
           <p className="mt-3 text-slate-600">
@@ -56,11 +66,13 @@ export default function ExploreActivities() {
                 transition={{ duration: 0.4 }}
                 className="bg-white rounded-3xl p-8 shadow-lg border border-slate-100 cursor-pointer"
               >
-                <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700 mb-6">
+                {/* Icon Container: Using mapping color */}
+                <div className={`w-14 h-14 flex items-center justify-center rounded-2xl ${item.color} text-white mb-6`}>
                   <Icon size={28} />
                 </div>
 
-                <h3 className="text-xl font-semibold text-slate-800">
+                {/* Title: Deep Charcoal */}
+                <h3 className="text-xl font-semibold text-[#1A1D1F]">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm text-slate-600">{item.desc}</p>
