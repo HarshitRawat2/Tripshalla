@@ -5,8 +5,8 @@ import { Phone, Mail, MapPin } from "lucide-react";
 export default function ContactMappCard({
   title = "Let’s Plan Your Next Adventure",
   subtitle = "We’re real people, based in India — and always happy to help.",
-  phone = "+91 98765 43210",
-  email = "info@yourtravel.com",
+  phone = "+91 7454875874",
+  email = "tripshalla@gmail.com",
   location = "Rishikesh, Uttarakhand, India",
   mapUrl = "https://www.google.com/maps?q=Rishikesh,+Uttarakhand&output=embed",
   onEnquiryClick,

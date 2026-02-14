@@ -6,7 +6,7 @@ import ContactFormCard from "./ContactFormCard";
 
 export default function ContactFullCard({
   mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7912.087235399928!2d78.69014637792219!3d30.18641301775502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1763101999789!5m2!1sen!2sin",
-  address = "55/11 Ronin Tower, New York",
+  address = "Rishikesh, Uttarakhand",
 }) {
   // motion variants
   const leftVariant = {
@@ -135,8 +135,8 @@ export default function ContactFullCard({
               </h3>
 
               <p className="text-slate-600 text-sm mt-2 max-w-sm">
-                Travlla is a multi-award-winning strategy and content creation
-                agency specializing in travel marketing.
+                Tripshalla is a multi-award-winning strategy and content
+                creation agency specializing in travel marketing.
               </p>
 
               <div className="mt-8 space-y-6">
@@ -147,7 +147,7 @@ export default function ContactFullCard({
                   </div>
                   <div>
                     <p className="font-semibold text-slate-800">Phone</p>
-                    <p className="text-slate-600 text-sm">123 654 0214</p>
+                    <p className="text-slate-600 text-sm">7454 8758 74</p>
                   </div>
                 </div>
 
@@ -159,7 +159,7 @@ export default function ContactFullCard({
                   <div>
                     <p className="font-semibold text-slate-800">Email</p>
                     <p className="text-slate-600 text-sm">
-                      travllainfo@gmail.com
+                      tripshalla@gmail.com
                     </p>
                   </div>
                 </div>
@@ -178,17 +178,17 @@ export default function ContactFullCard({
 
               {/* MAN IMAGE */}
               <img
-                src="/src/assets/contact-man.png"
+                src="/src/assets/TRIPSHALA.png"
                 className="w-60 mt-10 mx-auto md:mx-0"
                 alt="contact man"
               />
 
               {/* FOOTER TEXT */}
-              <div className="text-center mt-12">
+              {/* <div className="text-center mt-12">
                 <h2 className="text-2xl md:text-3xl font-semibold text-slate-700">
                   Let’s <span className="text-amber-500">Talk</span> About You !
                 </h2>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

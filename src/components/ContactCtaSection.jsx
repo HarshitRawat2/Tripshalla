@@ -2,8 +2,8 @@ import React from "react";
 import { Phone, MessageCircle } from "lucide-react";
 
 export default function ContactCTASection() {
-  const phoneNumber = "+91XXXXXXXXXX"; // replace
-  const whatsappNumber = "91XXXXXXXXXX"; // replace
+  const phoneNumber = "+917454875874"; // replace
+  const whatsappNumber = "917454875874"; // replace
   const whatsappMessage =
     "Hi, I’m interested in trekking / rafting packages in Uttarakhand.";
 

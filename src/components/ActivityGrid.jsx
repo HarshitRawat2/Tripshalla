@@ -345,7 +345,7 @@ export default function ActivityGrid() {
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    window.location.href = "tel:+91XXXXXXXXXX";
+                    window.location.href = "tel:+917454875874";
                   }}
                   className="p-4 bg-white/10 hover:bg-amber-500 rounded-2xl transition-all border border-white/20"
                 >

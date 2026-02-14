@@ -2,8 +2,8 @@
 import { Phone, MessageCircle } from "lucide-react";
 
 export default function StickyContactButtons() {
-  const phoneNumber = "+918069165906";
-  const whatsappNumber = "918069165906";
+  const phoneNumber = "+917454875874";
+  const whatsappNumber = "917454875874";
   const whatsappMessage = "Hi, I want details about Uttarakhand adventures.";
 
   return (

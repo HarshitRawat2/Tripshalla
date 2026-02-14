@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
 export default function StickyWhatsApp() {
-  const phoneNumber = "918069165906"; // country code + number
+  const phoneNumber = "917454875874"; // country code + number
   const message = encodeURIComponent(
     "Hi, I’m interested in this tour. Please share more details.",
   );

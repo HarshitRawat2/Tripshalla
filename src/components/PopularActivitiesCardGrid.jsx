@@ -2,51 +2,69 @@ import React from "react";
 import PopularActivitiesCard from "./PopularActivitiesCard";
 
 const PopularActivitiesCardGrid = () => {
-  // Example data based on your image
-  const destinations = [
+  const activities = [
     {
-      id: "igatpuri",
-      name: "Igatpuri",
-      category: "Trekking",
-      image: "/src/assets/1.jpg",
+      id: "rafting",
+      name: "River Rafting",
+      category: "Adventure",
+      price: "₹999",
+      rating: 4.8,
+      image: "/src/assets/36.jpg",
+      route: "/raftings",
     },
     {
-      id: "himachal",
-      name: "Himachal Pradesh",
-      category: "Trekking",
-      image: "/src/assets/1.jpg",
+      id: "bungee",
+      name: "Bungee Jumping",
+      category: "Extreme Adventure",
+      price: "₹3,499",
+      rating: 4.9,
+      image: "/src/assets/20.jpg",
+      route: "/bungee",
     },
+    // {
+    //   id: "camping",
+    //   name: "Camping",
+    //   category: "Stay Experience",
+    //   price: "₹1,499",
+    //   rating: 4.7,
+    //   image: "/src/assets/9.jpg",
+    //   route: "/camping",
+    // },
     {
-      id: "uttarakhand",
-      name: "Uttarakhand",
-      category: "Trekking",
-      image: "/src/assets/1.jpg",
-    },
-    {
-      id: "coorg",
-      name: "Coorg",
-      category: "Trekking",
-      image: "/src/assets/1.jpg",
+      id: "scooty",
+      name: "Scooty Rental",
+      category: "Local Travel",
+      price: "₹499",
+      rating: 4.6,
+      image: "/src/assets/65.jpg",
+      route: "/guide",
     },
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-12 font-sans">
-      {/* Section Title */}
-      <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 tracking-tight">
-        Best Trekking Destinations
-      </h2>
+    <section className="max-w-7xl mx-auto px-6 py-20">
+      {/* Section Header */}
+      <div className="text-center mb-14">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
+          Top Adventure Activities
+        </h2>
+        <p className="text-slate-500 mt-3 text-sm md:text-base">
+          Book the most thrilling experiences in Rishikesh
+        </p>
+      </div>
 
-      {/* 4-Column Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        {destinations.map((dest) => (
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {activities.map((item) => (
           <PopularActivitiesCard
-            key={dest.id}
-            id={dest.id}
-            name={dest.name}
-            category={dest.category}
-            image={dest.image}
-            compact
+            key={item.id}
+            id={item.id}
+            name={item.name}
+            category={item.category}
+            price={item.price}
+            rating={item.rating}
+            image={item.image}
+            route={item.route}
           />
         ))}
       </div>

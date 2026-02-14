@@ -26,7 +26,7 @@ export default function CorporateCollaborationCard() {
       {/* RIGHT CTA */}
       <div className="flex gap-3 w-full md:w-auto">
         <a
-          href="tel:+91XXXXXXXXXX"
+          href="tel:+917454875874"
           className="flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition"
         >
           <Phone size={16} />
@@ -34,7 +34,7 @@ export default function CorporateCollaborationCard() {
         </a>
 
         <a
-          href="https://wa.me/91XXXXXXXXXX?text=Hi, we are looking for a customized corporate or team adventure package with special pricing."
+          href="https://wa.me/917454875874?text=Hi, we are looking for a customized corporate or team adventure package with special pricing."
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 md:flex-none px-5 py-3 rounded-xl border-2 border-emerald-600 text-emerald-700 font-bold hover:bg-emerald-600 hover:text-white transition"
