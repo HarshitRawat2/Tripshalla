@@ -32,7 +32,7 @@
           "best_time": "6:00 – 7:00 PM (Aarti time)",
           "distance": "Central Rishikesh",
           "tips": "Reach at least 30 minutes early for a good spot during Aarti.",
-          "image": "/src/assets/64.jpg",
+          "image": "/assets/64.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=triveni+ghat&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
@@ -41,7 +41,7 @@
           "best_time": "Morning or Evening",
           "distance": "Ram Jhula Area",
           "tips": "Wear modest clothes and maintain silence inside the ashram.",
-          "image": "/src/assets/52.jpg",
+          "image": "/assets/52.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=parmarth+niketan+ashram&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
@@ -50,7 +50,7 @@
           "best_time": "Morning (8:00 – 11:00 AM)",
           "distance": "Near Ram Jhula",
           "tips": "Carry water and wear comfortable shoes; entry ticket required.",
-          "image": "/src/assets/53.jpg",
+          "image": "/assets/53.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=beatles+ashram&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
 
@@ -60,7 +60,7 @@
           "best_time": "Morning Walks",
           "distance": "Near Parmarth Niketan",
           "tips": "Best explored early morning for calm vibes.",
-          "image": "/src/assets/54.jpg",
+          "image": "/assets/54.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=ram+jhula&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
@@ -69,7 +69,7 @@
           "best_time": "Early Morning",
           "distance": "32 km from Rishikesh",
           "tips": "Road is scenic but narrow; ride carefully on scooty.",
-          "image": "/src/assets/61.jpg",
+          "image": "/assets/61.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=neelkanth+mahadev+temple&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
@@ -78,7 +78,7 @@
           "best_time": "Morning or Sunset",
           "distance": "Tapovan Area",
           "tips": "Great alternative to Lakshman Jhula for peaceful walks.",
-          "image": "/src/assets/57.jpg",
+          "image": "/assets/57.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=janki+setu+rishikesh&cp=30.136023%7E78.172970&lvl=10.7&style=r"
         }
       ]
@@ -94,7 +94,7 @@
           "best_time": "Morning (8:00 – 11:00 AM)",
           "distance": "6 km from Lakshman Jhula",
           "tips": "Wear good trekking shoes and avoid weekends for less crowd.",
-          "image": "/src/assets/56.jpg",
+          "image": "/assets/56.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=neer+garh+waterfall&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
@@ -103,7 +103,7 @@
           "best_time": "Early Morning or Sunset",
           "distance": "14 km from Tapovan",
           "tips": "Road is narrow but scenic; ideal for scooty rides. Carry water and avoid riding after dark.",
-          "image": "/src/assets/58.jpg",
+          "image": "/assets/58.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=kyarki+view+point&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
@@ -112,7 +112,7 @@
           "best_time": "Morning",
           "distance": "7 km from Lakshman Jhula",
           "tips": "Avoid visiting during heavy rainfall season.",
-          "image": "/src/assets/55.jpg",
+          "image": "/assets/55.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=patna+waterfall&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
 
@@ -122,7 +122,7 @@
           "best_time": "Anytime (Sunset recommended)",
           "distance": "16 km from Rishikesh",
           "tips": "Great stop while riding towards Devprayag road.",
-          "image": "/src/assets/59.jpg",
+          "image": "/assets/59.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=shivpuri+rishikesh&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
@@ -131,7 +131,7 @@
           "best_time": "Early Morning or Sunset",
           "distance": "24 km from Rishikesh",
           "tips": "Carry water; limited shops on the route.",
-          "image": "/src/assets/60.jpg",
+          "image": "/assets/60.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=marine+drive+rishikesh&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
@@ -140,7 +140,7 @@
           "best_time": "Morning",
           "distance": "36 km from Rishikesh",
           "tips": "Best for experienced riders; roads are curvy.",
-          "image": "/src/assets/50.jpg",
+          "image": "/assets/50.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=kaudiyala&cp=30.103121%7E78.299606&lvl=16&style=r"
         },
         {
@@ -149,7 +149,7 @@
           "best_time": "Morning or Evening",
           "distance": "Various spots around Tapovan & Shivpuri",
           "tips": "Avoid swimming; currents can be strong.",
-          "image": "/src/assets/60.jpg",
+          "image": "/assets/60.jpg",
           "map_link": "https://www.bing.com/maps/search?FORM=HDRSC6&q=ganga+beach+rishikesh&cp=30.103121%7E78.299606&lvl=16&style=r"
         }
       ]
