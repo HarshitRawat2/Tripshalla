@@ -17,11 +17,13 @@ export default function StatsAndReviewsSection({ onOpenEnquiry }) {
         {/* ---------- HEADER ---------- */}
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-extrabold">
-            Trusted by Thousands of Adventurers
+            Adventures You Can Trust. Experiences You’ll Remember.
           </h2>
+
           <p className="text-teal-100 mt-4">
-            From Himalayan treks to river rafting in Rishikesh, travelers across
-            Uttarakhand trust us for safe and unforgettable experiences.
+            Whether it’s high-adrenaline activities, peaceful riverside camping,
+            comfortable stays or guided Himalayan journeys, we focus on safety,
+            quality and unforgettable moments.
           </p>
         </div>
 
@@ -33,13 +35,13 @@ export default function StatsAndReviewsSection({ onOpenEnquiry }) {
 
         {/* ---------- CTA ---------- */}
         <div className="text-center">
-  <button 
-   onClick={onOpenEnquiry} // This triggers the modal
-    className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-amber-400 text-teal-900 font-bold hover:bg-amber-300 transition-all hover:-translate-y-1 shadow-lg active:scale-95"
-  >
-    Talk to a Local Expert
-  </button>
-</div>
+          <button
+            onClick={onOpenEnquiry} // This triggers the modal
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-amber-400 text-teal-900 font-bold hover:bg-amber-300 transition-all hover:-translate-y-1 shadow-lg active:scale-95"
+          >
+            Plan My Adventure
+          </button>
+        </div>
       </div>
     </section>
   );
@@ -51,10 +53,10 @@ export default function StatsAndReviewsSection({ onOpenEnquiry }) {
 
 function StatsGrid() {
   const stats = [
-    { label: "Happy Travelers", value: 12000, suffix: "+" },
-    { label: "Treks & Trips Completed", value: 3500, suffix: "+" },
-    { label: "Years of Local Experience", value: 10, suffix: "+" },
-    { label: "Average Rating", value: 4.8, suffix: "/5" },
+    { label: "Happy Adventurers", value: 850, suffix: "+" },
+    { label: "Rafting & Adventure Trips", value: 420, suffix: "+" },
+    { label: "Certified Instructors", value: 12, suffix: "+" },
+    { label: "Average Rating", value: 4.9, suffix: "/5" },
   ];
 
   const { ref, inView } = useInView({ triggerOnce: true });
@@ -114,19 +116,19 @@ function ReviewsGrid() {
       name: "Aman Sharma",
       location: "Delhi",
       rating: 5,
-      text: "Kuari Pass trek was perfectly managed. Great guides, amazing camps, and complete safety throughout the journey.",
+      text: "Did river rafting and camping with friends. Safety briefing was very clear and guides were experienced. Everything was properly managed.",
     },
     {
-      name: "Neha Verma",
-      location: "Bangalore",
-      rating: 5,
-      text: "River rafting in Rishikesh was thrilling! The team was super professional and friendly.",
-    },
-    {
-      name: "Rohit Mehta",
+      name: "Priya Mehta",
       location: "Mumbai",
-      rating: 4,
-      text: "Booked a camp stay with bike rental. Everything was smooth and well coordinated.",
+      rating: 5,
+      text: "Tried Splash Bungy for the first time and it was thrilling yet safe. Staff was supportive and professional throughout.",
+    },
+    {
+      name: "Vikas Yadav",
+      location: "Jaipur",
+      rating: 5,
+      text: "Clean riverside camp, good food and smooth booking process. Perfect weekend adventure getaway.",
     },
   ];
 

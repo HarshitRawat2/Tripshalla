@@ -3,31 +3,39 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Amelia Warner",
-    role: "Tourist",
-    image: "/assets/4.jpg",
-    avatars: ["/assets/1.jpg", "/assets/2.jpg", "/assets/3.jpg"],
-    text: `Once the travel bug bites, there is no known antidote. 
-    A journey is best measured in friends rather than miles.`,
+    name: "Rohit Sharma",
+    role: "Software Engineer, Delhi",
+    image: "/assets/room2.webp",
+    avatars: ["/assets/room1.webp", "/assets/room3.webp", "/assets/room5.webp"],
+    text: `I booked river rafting and riverside camping with my friends and it was an unforgettable experience. 
+The safety measures were top-notch and the instructors were very professional. 
+Everything was well managed from check-in to activities. Highly recommended for adventure lovers!`,
     rating: 5,
   },
+  //   {
+  //     name: "Ankit Verma",
+  //     role: "College Student, Mumbai",
+  //     image: "/assets/testimonials/ankit.jpg",
+  //     avatars: [
+  //       "/assets/testimonials/2.jpg",
+  //       "/assets/testimonials/3.jpg",
+  //       "/assets/testimonials/1.jpg",
+  //     ],
+  //     text: `We tried the Splash Bungy and Zipline and the thrill was next level!
+  // The staff made sure we felt safe and confident before the jump.
+  // The campsite was clean and food was surprisingly good. Totally worth the money.`,
+  //     rating: 5,
+  //   },
   {
-    name: "Daniel Brooks",
-    role: "Adventure Lover",
-    image: "/assets/5.jpg",
-    avatars: ["/assets/2.jpg", "/assets/3.jpg", "/assets/1.jpg"],
-    text: `Everything was perfectly planned. From hotels to experiences,
-    it felt effortless and memorable.`,
+    name: "Vikas Singh",
+    role: "Business Owner, Jaipur",
+    image: "/assets/raft1.webp",
+    avatars: ["/assets/raft2.webp", "/assets/raft3.webp", "/assets/raft4.webp"],
+    text: `Went for a weekend rafting trip with family. 
+The guides were experienced and very supportive, especially with first-timers. 
+Clean tents, proper safety gear, and amazing river views. 
+Will definitely visit again!`,
     rating: 5,
-  },
-  {
-    name: "Sophia Lee",
-    role: "Solo Traveller",
-    image: "/assets/6.jpg",
-    avatars: ["/assets/3.jpg", "/assets/1.jpg", "/assets/2.jpg"],
-    text: `I felt safe, excited, and inspired throughout my journey.
-    Highly recommended for solo travelers!`,
-    rating: 4,
   },
 ];
 

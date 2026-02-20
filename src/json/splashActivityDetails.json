@@ -34,15 +34,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/splash/sky-walk.jpg",
+        "media_url": "/assets/101.webp",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/splash/sky-walk-gallery-1.jpg",
+        "media_url": "/assets/103.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/sky-walk-gallery-2.jpg",
+        "media_url": "/assets/104.webp",
+        "media_role": "gallery"
+      },
+      {
+        "media_url": "/assets/105.webp",
+        "media_role": "activity"
+      },
+      {
+        "media_url": "/assets/106.webp",
+        "media_role": "stay"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "destination"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "hero"
+      },
+      {
+        "media_url": "/assets/108.webp",
         "media_role": "gallery"
       }
     ],
@@ -171,18 +191,37 @@
     "tagline": "A high-speed reverse bungy launch that shoots you skyward with intense G-forces.",
 
     "overview": "Rocket Bungy at Splash Adventure is a high-adrenaline reverse bungy experience where participants are launched rapidly upwards instead of jumping down. The ride delivers intense G-forces within seconds, propelling riders skyward before rebounding smoothly. It is designed for thrill seekers who want extreme excitement without the fear of stepping off a platform.",
-
     "media": [
       {
-        "media_url": "/src/assets/splash/rocket-bungy.jpg",
+        "media_url": "/assets/101.webp",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/splash/rocket-bungy-gallery-1.jpg",
+        "media_url": "/assets/103.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/rocket-bungy-gallery-2.jpg",
+        "media_url": "/assets/104.webp",
+        "media_role": "gallery"
+      },
+      {
+        "media_url": "/assets/105.webp",
+        "media_role": "activity"
+      },
+      {
+        "media_url": "/assets/106.webp",
+        "media_role": "stay"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "destination"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "hero"
+      },
+      {
+        "media_url": "/assets/108.webp",
         "media_role": "gallery"
       }
     ],
@@ -316,15 +355,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/splash/zipline.jpg",
+        "media_url": "/assets/101.webp",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/splash/zipline-gallery-1.jpg",
+        "media_url": "/assets/103.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/zipline-gallery-2.jpg",
+        "media_url": "/assets/104.webp",
+        "media_role": "gallery"
+      },
+      {
+        "media_url": "/assets/105.webp",
+        "media_role": "activity"
+      },
+      {
+        "media_url": "/assets/106.webp",
+        "media_role": "stay"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "destination"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "hero"
+      },
+      {
+        "media_url": "/assets/108.webp",
         "media_role": "gallery"
       }
     ],
@@ -457,15 +516,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/splash/tower-swing.jpg",
+        "media_url": "/assets/101.webp",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/splash/tower-swing-gallery-1.jpg",
+        "media_url": "/assets/103.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/tower-swing-gallery-2.jpg",
+        "media_url": "/assets/104.webp",
+        "media_role": "gallery"
+      },
+      {
+        "media_url": "/assets/105.webp",
+        "media_role": "activity"
+      },
+      {
+        "media_url": "/assets/106.webp",
+        "media_role": "stay"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "destination"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "hero"
+      },
+      {
+        "media_url": "/assets/108.webp",
         "media_role": "gallery"
       }
     ],
@@ -598,19 +677,38 @@
 
     "media": [
       {
-        "media_url": "/src/assets/splash/109m-bungy.jpg",
+        "media_url": "/assets/101.webp",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/splash/109m-bungy-gallery-1.jpg",
+        "media_url": "/assets/103.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/109m-bungy-gallery-2.jpg",
+        "media_url": "/assets/104.webp",
+        "media_role": "gallery"
+      },
+      {
+        "media_url": "/assets/105.webp",
+        "media_role": "activity"
+      },
+      {
+        "media_url": "/assets/106.webp",
+        "media_role": "stay"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "destination"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "hero"
+      },
+      {
+        "media_url": "/assets/108.webp",
         "media_role": "gallery"
       }
     ],
-
     "highlights": [
       "India’s highest water-touch bungy jump",
       "109-metre free-fall experience",
@@ -749,15 +847,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/splash/combo-1.jpg",
+        "media_url": "/assets/101.webp",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/splash/109m-bungy-gallery-1.jpg",
+        "media_url": "/assets/103.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/tower-swing-gallery-1.jpg",
+        "media_url": "/assets/104.webp",
+        "media_role": "gallery"
+      },
+      {
+        "media_url": "/assets/105.webp",
+        "media_role": "activity"
+      },
+      {
+        "media_url": "/assets/106.webp",
+        "media_role": "stay"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "destination"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "hero"
+      },
+      {
+        "media_url": "/assets/108.webp",
         "media_role": "gallery"
       }
     ],
@@ -909,19 +1027,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/splash/combo-2.jpg",
+        "media_url": "/assets/101.webp",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/splash/109m-bungy-gallery-1.jpg",
+        "media_url": "/assets/103.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/zipline-gallery-1.jpg",
+        "media_url": "/assets/104.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/sky-walk-gallery-1.jpg",
+        "media_url": "/assets/105.webp",
+        "media_role": "activity"
+      },
+      {
+        "media_url": "/assets/106.webp",
+        "media_role": "stay"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "destination"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "hero"
+      },
+      {
+        "media_url": "/assets/108.webp",
         "media_role": "gallery"
       }
     ],
@@ -1080,19 +1214,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/splash/combo-3.jpg",
+        "media_url": "/assets/101.webp",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/splash/rocket-bungy-gallery-1.jpg",
+        "media_url": "/assets/103.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/zipline-gallery-1.jpg",
+        "media_url": "/assets/104.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/sky-walk-gallery-1.jpg",
+        "media_url": "/assets/105.webp",
+        "media_role": "activity"
+      },
+      {
+        "media_url": "/assets/106.webp",
+        "media_role": "stay"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "destination"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "hero"
+      },
+      {
+        "media_url": "/assets/108.webp",
         "media_role": "gallery"
       }
     ],
@@ -1255,23 +1405,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/splash/combo-6.jpg",
+        "media_url": "/assets/101.webp",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/splash/109m-bungy-gallery-1.jpg",
+        "media_url": "/assets/103.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/rocket-bungy-gallery-1.jpg",
+        "media_url": "/assets/104.webp",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/splash/zipline-gallery-1.jpg",
-        "media_role": "gallery"
+        "media_url": "/assets/105.webp",
+        "media_role": "activity"
       },
       {
-        "media_url": "/src/assets/splash/sky-walk-gallery-1.jpg",
+        "media_url": "/assets/106.webp",
+        "media_role": "stay"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "destination"
+      },
+      {
+        "media_url": "/assets/107.webp",
+        "media_role": "hero"
+      },
+      {
+        "media_url": "/assets/108.webp",
         "media_role": "gallery"
       }
     ],

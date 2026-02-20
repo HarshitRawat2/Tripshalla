@@ -178,7 +178,7 @@ export default function ContactFullCard({
 
               {/* MAN IMAGE */}
               <img
-                src="/src/assets/TRIPSHALA.png"
+                src="/assets/TRIPSHALA.png"
                 className="w-60 mt-10 mx-auto md:mx-0"
                 alt="contact man"
               />
