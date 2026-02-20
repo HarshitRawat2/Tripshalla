@@ -31,35 +31,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/21.jpg",
+        "media_url": "/assets/21.jpg",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/22.jpg",
+        "media_url": "/assets/22.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/33.jpg",
+        "media_url": "/assets/33.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/34.jpg",
+        "media_url": "/assets/34.jpg",
         "media_role": "activity"
       },
       {
-        "media_url": "/src/assets/37.jpg",
+        "media_url": "/assets/37.jpg",
         "media_role": "stay"
       },
       {
-        "media_url": "/src/assets/35.jpg",
+        "media_url": "/assets/35.jpg",
         "media_role": "destination"
       },
       {
-        "media_url": "/src/assets/36.jpg",
+        "media_url": "/assets/36.jpg",
         "media_role": "hero"
       },
       {
-        "media_url": "/src/assets/38.jpg",
+        "media_url": "/assets/38.jpg",
         "media_role": "gallery"
       }
     ],
@@ -215,39 +215,39 @@
 
     "overview": "Club House rafting, starting from Phool Chatti, offers a slightly longer and more adventurous experience than Brahmpuri. Covering 14 kilometres on the River Ganga, this stretch includes consistent Grade II rapids combined with scenic calm stretches. It is ideal for beginners who want more excitement and groups looking for a balanced adventure experience in Rishikesh.",
 
-    "image": "/src/assets/22.jpg",
+    "image": "/assets/22.jpg",
 
     "media": [
       {
-        "media_url": "/src/assets/21.jpg",
+        "media_url": "/assets/21.jpg",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/22.jpg",
+        "media_url": "/assets/22.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/33.jpg",
+        "media_url": "/assets/33.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/34.jpg",
+        "media_url": "/assets/34.jpg",
         "media_role": "activity"
       },
       {
-        "media_url": "/src/assets/37.jpg",
+        "media_url": "/assets/37.jpg",
         "media_role": "stay"
       },
       {
-        "media_url": "/src/assets/35.jpg",
+        "media_url": "/assets/35.jpg",
         "media_role": "destination"
       },
       {
-        "media_url": "/src/assets/36.jpg",
+        "media_url": "/assets/36.jpg",
         "media_role": "hero"
       },
       {
-        "media_url": "/src/assets/38.jpg",
+        "media_url": "/assets/38.jpg",
         "media_role": "gallery"
       }
     ],
@@ -393,39 +393,39 @@
 
     "overview": "Shivpuri rafting is the most popular rafting stretch in Rishikesh, offering the perfect balance of thrill and safety. Covering 16 kilometres on the River Ganga, this route includes iconic Grade II–III rapids such as Roller Coaster and Golf Course. It is ideal for first-timers who want real excitement and for groups looking for an adventurous river experience.",
 
-    "image": "/src/assets/23.jpg",
+    "image": "/assets/23.jpg",
 
     "media": [
       {
-        "media_url": "/src/assets/21.jpg",
+        "media_url": "/assets/21.jpg",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/22.jpg",
+        "media_url": "/assets/22.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/33.jpg",
+        "media_url": "/assets/33.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/34.jpg",
+        "media_url": "/assets/34.jpg",
         "media_role": "activity"
       },
       {
-        "media_url": "/src/assets/37.jpg",
+        "media_url": "/assets/37.jpg",
         "media_role": "stay"
       },
       {
-        "media_url": "/src/assets/35.jpg",
+        "media_url": "/assets/35.jpg",
         "media_role": "destination"
       },
       {
-        "media_url": "/src/assets/36.jpg",
+        "media_url": "/assets/36.jpg",
         "media_role": "hero"
       },
       {
-        "media_url": "/src/assets/38.jpg",
+        "media_url": "/assets/38.jpg",
         "media_role": "gallery"
       }
     ],
@@ -599,35 +599,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/21.jpg",
+        "media_url": "/assets/21.jpg",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/22.jpg",
+        "media_url": "/assets/22.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/33.jpg",
+        "media_url": "/assets/33.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/34.jpg",
+        "media_url": "/assets/34.jpg",
         "media_role": "activity"
       },
       {
-        "media_url": "/src/assets/37.jpg",
+        "media_url": "/assets/37.jpg",
         "media_role": "stay"
       },
       {
-        "media_url": "/src/assets/35.jpg",
+        "media_url": "/assets/35.jpg",
         "media_role": "destination"
       },
       {
-        "media_url": "/src/assets/36.jpg",
+        "media_url": "/assets/36.jpg",
         "media_role": "hero"
       },
       {
-        "media_url": "/src/assets/38.jpg",
+        "media_url": "/assets/38.jpg",
         "media_role": "gallery"
       }
     ],

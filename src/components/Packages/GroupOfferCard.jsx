@@ -13,7 +13,7 @@ export default function GroupOfferCard() {
           <div className="relative shrink-0">
             <div className="absolute inset-0 bg-orange-500 rounded-2xl rotate-6 group-hover:rotate-12 transition-transform duration-300" />
             <img
-              src="/src/assets/1.jpg"
+              src="/assets/1.jpg"
               alt="Group travel"
               className="relative w-20 h-20 rounded-2xl object-cover border-2 border-slate-900 shadow-lg"
             />
