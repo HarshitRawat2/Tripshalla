@@ -805,35 +805,35 @@
 
     "media": [
       {
-        "media_url": "/src/assets/21.jpg",
+        "media_url": "/assets/21.jpg",
         "media_role": "hero_banner"
       },
       {
-        "media_url": "/src/assets/22.jpg",
+        "media_url": "/assets/22.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/33.jpg",
+        "media_url": "/assets/33.jpg",
         "media_role": "gallery"
       },
       {
-        "media_url": "/src/assets/34.jpg",
+        "media_url": "/assets/34.jpg",
         "media_role": "activity"
       },
       {
-        "media_url": "/src/assets/37.jpg",
+        "media_url": "/assets/37.jpg",
         "media_role": "stay"
       },
       {
-        "media_url": "/src/assets/35.jpg",
+        "media_url": "/assets/35.jpg",
         "media_role": "destination"
       },
       {
-        "media_url": "/src/assets/36.jpg",
+        "media_url": "/assets/36.jpg",
         "media_role": "hero"
       },
       {
-        "media_url": "/src/assets/38.jpg",
+        "media_url": "/assets/38.jpg",
         "media_role": "gallery"
       }
     ],
